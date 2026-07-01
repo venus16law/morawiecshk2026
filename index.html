@@ -177,6 +177,52 @@ table.simple tr:last-child td{border-bottom:none;}
 .navcard p{font-size:.82rem;color:var(--grey);}
 .navcard .go{margin-top:.9rem;font-size:.74rem;font-weight:700;color:var(--red);letter-spacing:.05em;}
 
+/* ---- Wedding Party tab CSS ---- */
+.wp-section{margin-bottom:2.8rem;}
+.wp-label{font-family:'Noto Sans TC',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin-bottom:.3rem;}
+.wp-title{font-family:'Cormorant Garamond',serif;font-size:1.9rem;margin-bottom:1.2rem;color:var(--ink);}
+
+.notice{background:#FFF8EC;border:1px solid var(--gold-soft);border-radius:8px;padding:1.1rem 1.3rem;display:flex;gap:.9rem;align-items:flex-start;margin-bottom:1.4rem;}
+.notice-icon{font-size:1.3rem;flex-shrink:0;line-height:1;}
+.notice p{font-size:.86rem;color:var(--ink);line-height:1.55;margin:0;}
+.notice p strong{color:var(--red);}
+
+.people-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-bottom:1.4rem;}
+.person-card{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:1rem 1.1rem;display:flex;gap:.9rem;align-items:flex-start;}
+.person-initial{width:40px;height:40px;border-radius:50%;background:var(--red);color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.person-initial.groom{background:var(--ink);}
+.person-info{}
+.person-name{font-size:.92rem;font-weight:600;color:var(--ink);line-height:1.25;}
+.person-role{font-size:.74rem;color:var(--grey);margin-top:.15rem;}
+
+.wp-divider{display:flex;align-items:center;gap:.9rem;margin:2rem 0 1.4rem;color:var(--grey);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;}
+.wp-divider::before,.wp-divider::after{content:"";flex:1;height:1px;background:var(--line);}
+
+.wp-card{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:1.2rem 1.4rem;margin-bottom:1rem;}
+.wp-card-sub{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:.5rem;}
+.wp-card p{font-size:.86rem;color:var(--grey);line-height:1.6;}
+.wp-card ul{padding-left:1.1rem;font-size:.86rem;color:var(--grey);line-height:1.7;}
+.wp-card.highlight{border-left:3px solid var(--gold);background:linear-gradient(135deg,var(--cream),var(--paper));}
+
+.wp-timeline{position:relative;max-width:680px;}
+.wp-timeline::before{content:"";position:absolute;left:50px;top:6px;bottom:6px;width:1px;background:linear-gradient(var(--gold),var(--gold-soft) 70%,transparent);}
+.wp-tl-item{display:flex;gap:1.2rem;margin-bottom:1.4rem;position:relative;}
+.wp-tl-item:last-child{margin-bottom:0;}
+.wp-tl-time{width:50px;flex-shrink:0;text-align:right;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--red);padding-top:.05rem;}
+.wp-tl-dot{position:absolute;left:44px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--gold);}
+.wp-tl-dot.bold{background:var(--red);border-color:var(--red);}
+.wp-tl-body{padding-left:2rem;}
+.wp-tl-label{font-size:.9rem;font-weight:600;color:var(--ink);margin-bottom:.15rem;}
+.wp-tl-note{font-size:.8rem;color:var(--grey);}
+
+@media(max-width:600px){
+  .people-grid{grid-template-columns:1fr 1fr;}
+  .person-card{padding:.8rem .9rem;}
+}
+@media(max-width:380px){
+  .people-grid{grid-template-columns:1fr;}
+}
+
 footer{background:var(--ink);color:rgba(255,255,255,.6);text-align:center;padding:2.6rem 1.4rem;font-size:.76rem;}
 footer b{color:var(--gold-soft);}
 
@@ -285,7 +331,7 @@ footer b{color:var(--gold-soft);}
 </div>
 
 <div class="tabs-wrapper">
-  <div class="tabs"><button class="tab-btn active" data-page="index" onclick="switchTab('index', this)">Overview</button><button class="tab-btn" data-page="rundown" onclick="switchTab('rundown', this)">Rundown</button><button class="tab-btn" data-page="family" onclick="switchTab('family', this)">Family</button><button class="tab-btn" data-page="dinner" onclick="switchTab('dinner', this)">Dinner</button></div>
+  <div class="tabs"><button class="tab-btn active" data-page="index" onclick="switchTab('index', this)">Overview</button><button class="tab-btn" data-page="rundown" onclick="switchTab('rundown', this)">Rundown</button><button class="tab-btn" data-page="family" onclick="switchTab('family', this)">Family</button><button class="tab-btn" data-page="dinner" onclick="switchTab('dinner', this)">Dinner</button><button class="tab-btn" data-page="party" onclick="switchTab('party', this)">Wedding Party</button></div>
 </div>
 
 
@@ -638,6 +684,118 @@ footer b{color:var(--gold-soft);}
     <div class="menu-list"><div class="menu-item"><div class="mnum">01</div><div><div class="cn">滿堂喜慶 <small>鴻運乳豬全體</small></div><div class="en">Barbecued Whole Suckling Pig</div></div></div><div class="menu-item"><div class="mnum">02</div><div><div class="cn">鴛鴦永結 <small>碧綠鮮蝦腰纏珊瑚桂花蚌</small></div><div class="en">Sautéed Prawn and Coral Clam with Vegetables</div></div></div><div class="menu-item"><div class="mnum">03</div><div><div class="cn">相思邂逅 <small>雞茸燴燕窩</small></div><div class="en">Braised Bird's Nest Soup with Minced Chicken</div></div></div><div class="menu-item"><div class="mnum">04</div><div><div class="cn">緣定今生 <small>蠔皇翡翠原隻三頭鮑魚扣鵝掌</small></div><div class="en">Braised Whole Abalone with Goose Web in Oyster Sauce</div></div></div><div class="menu-item"><div class="mnum">05</div><div><div class="cn">福祿有餘 <small>清蒸海星斑</small></div><div class="en">Steamed Coral Grouper</div></div></div><div class="menu-item"><div class="mnum">06</div><div><div class="cn">金鳳結緣 <small>蒜香脆皮雞</small></div><div class="en">Deep-fried Crispy Chicken with Crispy Garlic</div></div></div><div class="menu-item"><div class="mnum">07</div><div><div class="cn">良辰美景 <small>蒜香櫻花蝦海鮮炒飯</small></div><div class="en">Fried Rice with Seafood, Preserved Vegetables and Egg White</div></div></div><div class="menu-item"><div class="mnum">08</div><div><div class="cn">白頭到老 <small>鮑汁蝦籽燴長壽伊府麵</small></div><div class="en">Fried Rice with Sakura Shrimp, Seafood and Garlic</div></div></div><div class="menu-item"><div class="mnum">09</div><div><div class="cn">天賜良緣 <small>合桃露湯圓</small></div><div class="en">Sweetened Walnut Cream with Rice Dumpling</div></div></div><div class="menu-item"><div class="mnum">10</div><div><div class="cn">好事成雙 <small>美點雙輝映</small></div><div class="en">Chinese Petit Fours</div></div></div><div class="menu-item"><div class="mnum">11</div><div><div class="cn">甜甜蜜蜜 <small>時令鮮果盤</small></div><div class="en">Seasonal Fresh Fruit Platter</div></div></div></div>
   </div>
 </section>
+
+  </main>
+</section>
+
+<section class="page" id="page-party">
+  <main>
+  
+<section>
+  <div class="section-head">
+    <div class="roundel">頁</div>
+    <div><h2>Wedding party guide</h2><p class="desc">Your timeline, responsibilities, and everything you need to know for the Hong Kong banquet.</p></div>
+  </div>
+</section>
+  
+<div class="wp-section">
+  <div class="notice">
+    <div class="notice-icon">🎋</div>
+    <p>Whole wedding party must arrive by <strong>5:00pm</strong> on Friday, 23 October at the <strong>Dynasty Club, Seaview Room, 7F</strong>. Dress code is <strong>formal attire</strong>. Reception opens at 5:00pm, banquet at 7:00pm — guests begin arriving from 6:00pm.</p>
+  </div>
+</div>
+
+<div class="wp-section">
+  <div class="wp-divider">Bridesmaids</div>
+  <div class="people-grid">
+    <div class="person-card"><div class="person-initial">LN</div><div class="person-info"><div class="person-name">Liz Nichols</div><div class="person-role">Bridesmaid &middot; Table 1</div></div></div>
+    <div class="person-card"><div class="person-initial">AM</div><div class="person-info"><div class="person-name">Annie Morawiec</div><div class="person-role">Bridesmaid &middot; Table 1</div></div></div>
+    <div class="person-card"><div class="person-initial">WS</div><div class="person-info"><div class="person-name">Willa Smith</div><div class="person-role">Bridesmaid &middot; Table 14</div></div></div>
+    <div class="person-card"><div class="person-initial">EA</div><div class="person-info"><div class="person-name">Emily Arroyo</div><div class="person-role">Bridesmaid &middot; Table 14</div></div></div>
+    <div class="person-card"><div class="person-initial">IM</div><div class="person-info"><div class="person-name">Isabelle Mollicone</div><div class="person-role">Bridesmaid &middot; Table 14</div></div></div>
+  </div>
+
+  <div class="wp-divider">Groomsmen</div>
+  <div class="people-grid">
+    <div class="person-card"><div class="person-initial groom">JL</div><div class="person-info"><div class="person-name">Justin Law</div><div class="person-role">Groomsman &middot; Table 1</div></div></div>
+    <div class="person-card"><div class="person-initial groom">KM</div><div class="person-info"><div class="person-name">Kai McNamee</div><div class="person-role">Groomsman &middot; Table 14</div></div></div>
+    <div class="person-card"><div class="person-initial groom">XL</div><div class="person-info"><div class="person-name">Xander Lee</div><div class="person-role">Groomsman &middot; Table 14</div></div></div>
+    <div class="person-card"><div class="person-initial groom">TX</div><div class="person-info"><div class="person-name">Thomas Xu</div><div class="person-role">Groomsman &middot; Table 14</div></div></div>
+  </div>
+</div>
+
+<div class="wp-section">
+  <div class="wp-divider">Your Day &mdash; Friday 23 October</div>
+
+  <div class="notice" style="margin-bottom:1.4rem;">
+    <div class="notice-icon">💄</div>
+    <p><strong>Bridesmaids</strong> &mdash; your day starts mid-afternoon, well before the 5pm party call. Plan your morning accordingly. <strong>Groomsmen</strong> &mdash; arrive by 5:00pm sharp.</p>
+  </div>
+
+  <div class="wp-timeline">
+    <div class="wp-tl-item"><div class="wp-tl-time">1:30</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">Ruth&rsquo;s make up</div><div class="wp-tl-note">At The Dynasty Club</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">2:15</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">Liz Nichols &mdash; make up</div><div class="wp-tl-note">At The Dynasty Club</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">3:00</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">Bridesmaids &mdash; getting ready begins</div><div class="wp-tl-note">Photographer and videographer arrive &mdash; getting-ready moments will be captured. Hair stylist and make up for Venus begins. Champagne and high tea provided while getting ready at The Dynasty Club. Band arrives to set up in the Seaview Room.</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">5:00</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">Whole wedding party arrives</div><div class="wp-tl-note">Dynasty Club, Seaview Room, 7F &mdash; groomsmen join here</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">5:15</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">Tea ceremony &amp; photos</div><div class="wp-tl-note">5:15&ndash;5:45pm. Order: Pete &amp; Hope → Ruth &amp; Marso → Justin → all aunts &amp; uncles. Wedding party present throughout.</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">5:30</div><div class="wp-tl-dot"></div><div class="wp-tl-body"><div class="wp-tl-label">Pilot Voices sound check</div><div class="wp-tl-note">Band is setting up &mdash; be aware of activity in the room</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">6:00</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">Guests begin arriving &mdash; all hands on deck</div><div class="wp-tl-note">Bridesmaids and groomsmen receive guests at the door, direct people to their table seating, help form photo lines, and keep the energy up. Aunts are stationed at the gifts table.</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">6:30</div><div class="wp-tl-dot"></div><div class="wp-tl-body"><div class="wp-tl-label">Venus changes into white outfit</div><div class="wp-tl-note">Bridesmaids assist if needed</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">6:35</div><div class="wp-tl-dot"></div><div class="wp-tl-body"><div class="wp-tl-label">Pilot Voices performs &mdash; 4 songs</div><div class="wp-tl-note">6:35&ndash;6:55pm. Continue receiving any late-arriving guests.</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">7:00</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">March in &amp; toasts</div><div class="wp-tl-note">Toast with parents and V&amp;M &mdash; Marso delivers welcome speech (3 min). Family sings Stand by Me together.</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">7:10</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">Justin introduces Hope to pray &mdash; dinner begins</div><div class="wp-tl-note">Justin Law cues Hope Morawiec to say grace before the first course. Band plays throughout dinner.</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">~mid</div><div class="wp-tl-dot"></div><div class="wp-tl-body"><div class="wp-tl-label">Francis Liu sings</div><div class="wp-tl-note">After the fish course, before chicken &mdash; someone needs to cue Francis Liu to come up.</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">~mid</div><div class="wp-tl-dot"></div><div class="wp-tl-body"><div class="wp-tl-label">Venus changes into blue dress</div><div class="wp-tl-note">Bridesmaids assist if needed</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">later</div><div class="wp-tl-dot"></div><div class="wp-tl-body"><div class="wp-tl-label">Table toasts &amp; open singing</div><div class="wp-tl-note">Auntie Clara signs up the next singers from tables &mdash; cousins, dads&rsquo; friends, etc. Keep the energy going and cheer everyone on.</div></div></div>
+  </div>
+</div>
+
+<div class="wp-section">
+  <div class="wp-divider">Your Responsibilities</div>
+
+  <div class="wp-card highlight">
+    <div class="wp-card-sub">Cocktail hour &mdash; 6:00pm to 7:00pm</div>
+    <p>This is the wedding party&rsquo;s busiest window. Split up and cover the room:</p>
+    <ul>
+      <li>Station yourselves at the <strong>room entrance</strong> to welcome and greet guests as they arrive</li>
+      <li>Direct guests to their <strong>table assignments</strong> &mdash; know the room layout and table numbers</li>
+      <li>Help <strong>organise the photo queue</strong> &mdash; guests who want a photo with V&amp;M need to line up in an orderly way so the couple isn&rsquo;t mobbed</li>
+      <li>Keep things <strong>moving and festive</strong> &mdash; guide people to drinks, introduce guests who don&rsquo;t know each other, fill the room with good energy</li>
+    </ul>
+  </div>
+
+  <div class="wp-card">
+    <div class="wp-card-sub">Tea ceremony &mdash; 5:15pm</div>
+    <p>Be present and supportive. The order is Pete &amp; Hope first, then Ruth &amp; Marso, then Justin, then all aunts and uncles. Help keep the flow moving and make sure the next family members are ready to step in on time.</p>
+  </div>
+
+  <div class="wp-card">
+    <div class="wp-card-sub">Justin Law &mdash; two specific cues</div>
+    <ul>
+      <li><strong>7:00pm march in:</strong> Justin is walking in with the family and helps lead Stand by Me with the family group after Marso&rsquo;s speech.</li>
+      <li><strong>7:10pm dinner prayer:</strong> Justin introduces Hope Morawiec to say grace before the first course begins. Be ready, know your cue.</li>
+    </ul>
+  </div>
+
+  <div class="wp-card">
+    <div class="wp-card-sub">During dinner</div>
+    <p>Once seated, your job is to enjoy the night &mdash; but keep one ear open. Cheer on the table toasts, support Francis Liu when he sings, and help Auntie Clara sign up singers if the queue slows down. If Venus needs help changing outfits, bridesmaids assist quickly and quietly.</p>
+  </div>
+
+  <div class="wp-card">
+    <div class="wp-card-sub">Attire &mdash; same as LA 🎉</div>
+    <p>Good news &mdash; no shopping required. <strong>Bridesmaids, wear the same dresses as the LA wedding.</strong> <strong>Groomsmen, same tuxedos.</strong> Dress code for guests is formal attire, so you&rsquo;ll fit right in.</p>
+  </div>
+
+  <div class="wp-card">
+    <div class="wp-card-sub">Good to know</div>
+    <ul>
+      <li>Aunts are stationed at the <strong>gifts table</strong> during cocktail hour &mdash; direct guests who are looking for where to leave gifts</li>
+      <li>Photographer and videographer arrive at <strong>3:00pm</strong> &mdash; you may be photographed while getting ready</li>
+      <li>Champagne and high tea are provided while getting ready from 3:00pm</li>
+    </ul>
+  </div>
+</div>
 
   </main>
 </section>
