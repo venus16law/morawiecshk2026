@@ -213,7 +213,12 @@ footer b{color:var(--gold-soft);}
 .seat.flag .bubble{border-color:var(--red);background:#FFF1F1;}
 .seat .name{font-size:.66rem;color:var(--ink);line-height:1.18;font-family:'Inter',sans-serif;}
 .seat .name .zh{display:block;font-family:'Noto Sans TC',sans-serif;font-size:.6rem;color:var(--grey);}
-@media(max-width:420px){.table-wheel{width:260px;height:260px;}.seat{transform:translate(-50%,-50%) rotate(var(--angle)) translate(104px) rotate(calc(-1 * var(--angle)));}}
+@media(max-width:420px){
+  .table-wheel{width:260px;height:260px;}
+  .seat{width:62px;transform:translate(-50%,-50%) rotate(var(--angle)) translate(104px) rotate(calc(-1 * var(--angle)));}
+  .seat .bubble{width:34px;height:34px;font-size:.58rem;}
+  .seat .name{font-size:.56rem;line-height:1.1;}
+}
 
 /* ---- head table (larger) ---- */
 .table-card.head{grid-column:span 2;background:linear-gradient(160deg,var(--cream),#fff);border-color:var(--gold);}
@@ -232,8 +237,11 @@ footer b{color:var(--gold-soft);}
   .table-card.head .seat .name{font-size:.66rem;}
 }
 @media(max-width:420px){
-  .table-card.head .table-wheel{width:268px;height:268px;}
-  .table-card.head .seat{transform:translate(-50%,-50%) rotate(var(--angle)) translate(110px) rotate(calc(-1 * var(--angle)));}
+  .table-card.head .table-wheel{width:300px;height:300px;}
+  .table-card.head .table-center{width:80px;height:80px;font-size:1.4rem;}
+  .table-card.head .seat{width:78px;transform:translate(-50%,-50%) rotate(var(--angle)) translate(128px) rotate(calc(-1 * var(--angle)));}
+  .table-card.head .seat .bubble{width:38px;height:38px;font-size:.6rem;}
+  .table-card.head .seat .name{font-size:.58rem;line-height:1.1;}
 }
 
 /* ---- general mobile pass ---- */
@@ -474,103 +482,145 @@ footer b{color:var(--gold-soft);}
 <section>
   <div class="section-head">
     <div class="roundel">客</div>
-    <div><h2>Table seating, confirmed draft</h2><p class="desc">Aerial view of all 14 tables from Venus's planning sheet. Table 14 is Venus's side of overseas guests. Flowered seats are flagged guests on the original sheet.</p></div>
+    <div><h2>Table seating, confirmed draft</h2><p class="desc">Aerial view of all 14 tables, with group labels, from the updated planning sheet. Table 1 is the family/head table (15 guests). Table 14 is Venus's overseas friends.</p></div>
   </div>
   <div class="tables-grid">
     
 <div class="table-card head">
-  <div class="table-card-head"><h3>Table 1</h3><span class="count">14 guests<span class="count" style="display:block;color:var(--red);font-weight:700;">Head table</span></span></div>
+  <div class="table-card-head">
+    <div><h3>Table 1</h3><span class="count" style="color:var(--grey);font-style:italic;">Family</span></div>
+    <span class="count">15 guests<span class="count" style="display:block;color:var(--red);font-weight:700;">Head table</span></span>
+  </div>
   <div class="table-wheel">
     <div class="table-center"><small>Table</small>1</div>
-    <div class="seat" style="--angle:0.0deg;"><div class="bubble">ML</div><div class="name">Marso Law</div></div><div class="seat" style="--angle:25.71deg;"><div class="bubble">RL</div><div class="name">Ruth Law</div></div><div class="seat" style="--angle:51.43deg;"><div class="bubble">JL</div><div class="name">Justin Law</div></div><div class="seat" style="--angle:77.14deg;"><div class="bubble">LN</div><div class="name">Liz Nichols</div></div><div class="seat" style="--angle:102.86deg;"><div class="bubble">VL</div><div class="name">Venus Law</div></div><div class="seat" style="--angle:128.57deg;"><div class="bubble">MM</div><div class="name">Matt Morawiec</div></div><div class="seat" style="--angle:154.29deg;"><div class="bubble">PM</div><div class="name">Pete Morawiec</div></div><div class="seat" style="--angle:180.0deg;"><div class="bubble">HM</div><div class="name">Hope Morawiec</div></div><div class="seat" style="--angle:205.71deg;"><div class="bubble">AM</div><div class="name">Annie Morawiec</div></div><div class="seat" style="--angle:231.43deg;"><div class="bubble">LY</div><div class="name">Lai Yin Wah (大家姐)</div></div><div class="seat" style="--angle:257.14deg;"><div class="bubble">KM</div><div class="name">Ku Moon Choi (大姐夫)</div></div><div class="seat" style="--angle:282.86deg;"><div class="bubble">AL</div><div class="name">Amy Lai (二家姐)</div></div><div class="seat" style="--angle:308.57deg;"><div class="bubble">CL</div><div class="name">Clara Lai</div></div><div class="seat" style="--angle:334.29deg;"><div class="bubble">HT</div><div class="name">Harry Tsang</div></div>
+    <div class="seat" style="--angle:0.0deg;"><div class="bubble">ML</div><div class="name">Marso Law</div></div><div class="seat" style="--angle:24.0deg;"><div class="bubble">RL</div><div class="name">Ruth Law</div></div><div class="seat" style="--angle:48.0deg;"><div class="bubble">JL</div><div class="name">Justin Law</div></div><div class="seat" style="--angle:72.0deg;"><div class="bubble">LN</div><div class="name">Liz Nichols</div></div><div class="seat" style="--angle:96.0deg;"><div class="bubble">VL</div><div class="name">Venus Law</div></div><div class="seat" style="--angle:120.0deg;"><div class="bubble">MM</div><div class="name">Matt Morawiec</div></div><div class="seat" style="--angle:144.0deg;"><div class="bubble">PM</div><div class="name">Pete Morawiec</div></div><div class="seat" style="--angle:168.0deg;"><div class="bubble">HM</div><div class="name">Hope Morawiec</div></div><div class="seat" style="--angle:192.0deg;"><div class="bubble">AM</div><div class="name">Annie Morawiec</div></div><div class="seat" style="--angle:216.0deg;"><div class="bubble">LY</div><div class="name">Lai Yin Wah (大家姐)</div></div><div class="seat" style="--angle:240.0deg;"><div class="bubble">KM</div><div class="name">Ku Moon Choi (大姐夫)</div></div><div class="seat" style="--angle:264.0deg;"><div class="bubble">AL</div><div class="name">Amy Lai (二家姐)</div></div><div class="seat" style="--angle:288.0deg;"><div class="bubble">CL</div><div class="name">Clara Lai</div></div><div class="seat" style="--angle:312.0deg;"><div class="bubble">HT</div><div class="name">Harry Tsang</div></div><div class="seat" style="--angle:336.0deg;"><div class="bubble">LM</div><div class="name">Lo Mei Chun (三姨)</div></div>
   </div>
 </div>
 <div class="table-card">
-  <div class="table-card-head"><h3>Table 2</h3><span class="count">13 guests</span></div>
+  <div class="table-card-head">
+    <div><h3>Table 2</h3><span class="count" style="color:var(--grey);font-style:italic;">Family</span></div>
+    <span class="count">13 guests</span>
+  </div>
   <div class="table-wheel">
     <div class="table-center"><small>Table</small>2</div>
     <div class="seat" style="--angle:0.0deg;"><div class="bubble">MY</div><div class="name">Moses Yeung</div></div><div class="seat" style="--angle:27.69deg;"><div class="bubble">IL</div><div class="name">Ida Lam</div></div><div class="seat" style="--angle:55.38deg;"><div class="bubble">CY</div><div class="name">Charmaine Yeung</div></div><div class="seat" style="--angle:83.08deg;"><div class="bubble">PY</div><div class="name">Patrick Yeung</div></div><div class="seat" style="--angle:110.77deg;"><div class="bubble">RY</div><div class="name">Rebecca Yeung</div></div><div class="seat" style="--angle:138.46deg;"><div class="bubble">LK</div><div class="name">Law Koon Chung</div></div><div class="seat" style="--angle:166.15deg;"><div class="bubble">SL</div><div class="name">Sophia Law</div></div><div class="seat" style="--angle:193.85deg;"><div class="bubble">JC</div><div class="name">Joe Chan</div></div><div class="seat" style="--angle:221.54deg;"><div class="bubble">LL</div><div class="name">Livia Law</div></div><div class="seat" style="--angle:249.23deg;"><div class="bubble">RY</div><div class="name">Ronald Yau</div></div><div class="seat" style="--angle:276.92deg;"><div class="bubble">MY</div><div class="name">Moses Yau</div></div><div class="seat" style="--angle:304.62deg;"><div class="bubble">ML</div><div class="name">May Law</div></div><div class="seat" style="--angle:332.31deg;"><div class="bubble">AL</div><div class="name">August Lambert</div></div>
   </div>
 </div>
 <div class="table-card">
-  <div class="table-card-head"><h3>Table 3</h3><span class="count">12 guests</span></div>
+  <div class="table-card-head">
+    <div><h3>Table 3</h3><span class="count" style="color:var(--grey);font-style:italic;">Family</span></div>
+    <span class="count">12 guests</span>
+  </div>
   <div class="table-wheel">
     <div class="table-center"><small>Table</small>3</div>
     <div class="seat" style="--angle:0.0deg;"><div class="bubble">JK</div><div class="name">Jonathan Ku</div></div><div class="seat" style="--angle:30.0deg;"><div class="bubble">MK</div><div class="name">Mrs Ku</div></div><div class="seat" style="--angle:60.0deg;"><div class="bubble">MK</div><div class="name">Marcus Ku</div></div><div class="seat" style="--angle:90.0deg;"><div class="bubble">AK</div><div class="name">Adrain Ku</div></div><div class="seat" style="--angle:120.0deg;"><div class="bubble">KK</div><div class="name">Katherine Ku</div></div><div class="seat" style="--angle:150.0deg;"><div class="bubble">PL</div><div class="name">Patrick Lai</div></div><div class="seat" style="--angle:180.0deg;"><div class="bubble">CL</div><div class="name">Candace Lai</div></div><div class="seat" style="--angle:210.0deg;"><div class="bubble">CL</div><div class="name">Cayley Lai</div></div><div class="seat" style="--angle:240.0deg;"><div class="bubble">RK</div><div class="name">Rain Ku</div></div><div class="seat" style="--angle:270.0deg;"><div class="bubble">LK</div><div class="name">Ling Ku</div></div><div class="seat" style="--angle:300.0deg;"><div class="bubble">KC</div><div class="name">Ku Ching</div></div><div class="seat" style="--angle:330.0deg;"><div class="bubble">KS</div><div class="name">Ku Sum</div></div>
   </div>
 </div>
 <div class="table-card">
-  <div class="table-card-head"><h3>Table 4</h3><span class="count">11 guests</span></div>
+  <div class="table-card-head">
+    <div><h3>Table 4</h3><span class="count" style="color:var(--grey);font-style:italic;">Church Friends</span></div>
+    <span class="count">8 guests</span>
+  </div>
   <div class="table-wheel">
     <div class="table-center"><small>Table</small>4</div>
-    <div class="seat" style="--angle:0.0deg;"><div class="bubble">MK</div><div class="name">Monsher Kwan</div></div><div class="seat" style="--angle:32.73deg;"><div class="bubble">MP</div><div class="name">Michelle Pang</div></div><div class="seat" style="--angle:65.45deg;"><div class="bubble">SC</div><div class="name">Shirley Chan</div></div><div class="seat" style="--angle:98.18deg;"><div class="bubble">AC</div><div class="name">Anthony Chan</div></div><div class="seat" style="--angle:130.91deg;"><div class="bubble">SC</div><div class="name">Samantha Chi</div></div><div class="seat" style="--angle:163.64deg;"><div class="bubble">DL</div><div class="name">Daniel Leung</div></div><div class="seat" style="--angle:196.36deg;"><div class="bubble">AL</div><div class="name">Adeline Louie</div></div><div class="seat" style="--angle:229.09deg;"><div class="bubble">RT</div><div class="name">Rain Tsang</div></div><div class="seat flag" style="--angle:261.82deg;"><div class="bubble">JW</div><div class="name">Jennie Wong</div></div><div class="seat flag" style="--angle:294.55deg;"><div class="bubble">TH</div><div class="name">Tina Hung</div></div><div class="seat flag" style="--angle:327.27deg;"><div class="bubble">LC</div><div class="name">Linda Cheung</div></div>
+    <div class="seat" style="--angle:0.0deg;"><div class="bubble">MK</div><div class="name">Monsher Kwan</div></div><div class="seat" style="--angle:45.0deg;"><div class="bubble">MP</div><div class="name">Michelle Pang</div></div><div class="seat" style="--angle:90.0deg;"><div class="bubble">SC</div><div class="name">Shirley Chan</div></div><div class="seat" style="--angle:135.0deg;"><div class="bubble">AC</div><div class="name">Anthony Chan</div></div><div class="seat" style="--angle:180.0deg;"><div class="bubble">SC</div><div class="name">Samantha Chi</div></div><div class="seat" style="--angle:225.0deg;"><div class="bubble">DL</div><div class="name">Daniel Leung</div></div><div class="seat" style="--angle:270.0deg;"><div class="bubble">AL</div><div class="name">Adeline Louie</div></div><div class="seat" style="--angle:315.0deg;"><div class="bubble">RT</div><div class="name">Rain Tsang</div></div>
   </div>
 </div>
 <div class="table-card">
-  <div class="table-card-head"><h3>Table 5</h3><span class="count">12 guests</span></div>
+  <div class="table-card-head">
+    <div><h3>Table 5</h3><span class="count" style="color:var(--grey);font-style:italic;">北海道 Friends</span></div>
+    <span class="count">12 guests</span>
+  </div>
   <div class="table-wheel">
     <div class="table-center"><small>Table</small>5</div>
     <div class="seat" style="--angle:0.0deg;"><div class="bubble">DF</div><div class="name">Dickson Fung</div></div><div class="seat" style="--angle:30.0deg;"><div class="bubble">KF</div><div class="name">Karen Fung</div></div><div class="seat" style="--angle:60.0deg;"><div class="bubble">CT</div><div class="name">Chan Tak Kei</div></div><div class="seat" style="--angle:90.0deg;"><div class="bubble">JL</div><div class="name">Jacky Leung</div></div><div class="seat" style="--angle:120.0deg;"><div class="bubble">SC</div><div class="name">Suky Chen</div></div><div class="seat" style="--angle:150.0deg;"><div class="bubble">LC</div><div class="name">Lai Chi Yung</div></div><div class="seat" style="--angle:180.0deg;"><div class="bubble">IL</div><div class="name">Ida Lau</div></div><div class="seat" style="--angle:210.0deg;"><div class="bubble">MK</div><div class="name">Man Kim Ming</div></div><div class="seat" style="--angle:240.0deg;"><div class="bubble">MT</div><div class="name">Mimi Tang</div></div><div class="seat" style="--angle:270.0deg;"><div class="bubble">CK</div><div class="name">Cheung Kam Ming</div></div><div class="seat" style="--angle:300.0deg;"><div class="bubble">EK</div><div class="name">Emily Kiang</div></div><div class="seat" style="--angle:330.0deg;"><div class="bubble">MK</div><div class="name">Milton Kiang</div></div>
   </div>
 </div>
 <div class="table-card">
-  <div class="table-card-head"><h3>Table 6</h3><span class="count">12 guests</span></div>
+  <div class="table-card-head">
+    <div><h3>Table 6</h3><span class="count" style="color:var(--grey);font-style:italic;">Church Friends</span></div>
+    <span class="count">12 guests</span>
+  </div>
   <div class="table-wheel">
     <div class="table-center"><small>Table</small>6</div>
-    <div class="seat" style="--angle:0.0deg;"><div class="bubble">FC</div><div class="name">Fidelia Chan</div></div><div class="seat" style="--angle:30.0deg;"><div class="bubble">AC</div><div class="name">Alvin Chan</div></div><div class="seat" style="--angle:60.0deg;"><div class="bubble">JL</div><div class="name">Joan Lau</div></div><div class="seat" style="--angle:90.0deg;"><div class="bubble">EY</div><div class="name">Eric Yeung</div></div><div class="seat" style="--angle:120.0deg;"><div class="bubble">MY</div><div class="name">Maureen Yu</div></div><div class="seat" style="--angle:150.0deg;"><div class="bubble">EY</div><div class="name">Edward Yu</div></div><div class="seat" style="--angle:180.0deg;"><div class="bubble">RL</div><div class="name">Rowena Lok</div></div><div class="seat" style="--angle:210.0deg;"><div class="bubble">ML</div><div class="name">Michelle Lok</div></div><div class="seat flag" style="--angle:240.0deg;"><div class="bubble">AC</div><div class="name">Andy Chan</div></div><div class="seat flag" style="--angle:270.0deg;"><div class="bubble">MT</div><div class="name">Maygi Tsui</div></div><div class="seat flag" style="--angle:300.0deg;"><div class="bubble">RP</div><div class="name">Rev Peter Lam</div></div><div class="seat flag" style="--angle:330.0deg;"><div class="bubble">CL</div><div class="name">Charlotte Lam</div></div>
+    <div class="seat" style="--angle:0.0deg;"><div class="bubble">FC</div><div class="name">Fidelia Chan</div></div><div class="seat" style="--angle:30.0deg;"><div class="bubble">AC</div><div class="name">Alvin Chan</div></div><div class="seat" style="--angle:60.0deg;"><div class="bubble">JL</div><div class="name">Joan Lau</div></div><div class="seat" style="--angle:90.0deg;"><div class="bubble">EY</div><div class="name">Eric Yeung</div></div><div class="seat" style="--angle:120.0deg;"><div class="bubble">MY</div><div class="name">Maureen Yu</div></div><div class="seat" style="--angle:150.0deg;"><div class="bubble">EY</div><div class="name">Edward Yu</div></div><div class="seat" style="--angle:180.0deg;"><div class="bubble">RL</div><div class="name">Rowena Lok</div></div><div class="seat" style="--angle:210.0deg;"><div class="bubble">ML</div><div class="name">Michelle Lok</div></div><div class="seat" style="--angle:240.0deg;"><div class="bubble">TK</div><div class="name">Tiffany Koo</div></div><div class="seat" style="--angle:270.0deg;"><div class="bubble">PK</div><div class="name">Patrick Koo</div></div><div class="seat" style="--angle:300.0deg;"><div class="bubble">LC</div><div class="name">Lai Chun Shun</div></div><div class="seat" style="--angle:330.0deg;"><div class="bubble">SL</div><div class="name">Selina Lai</div></div>
   </div>
 </div>
 <div class="table-card">
-  <div class="table-card-head"><h3>Table 7</h3><span class="count">12 guests</span></div>
+  <div class="table-card-head">
+    <div><h3>Table 7</h3><span class="count" style="color:var(--grey);font-style:italic;">Friends</span></div>
+    <span class="count">8 guests</span>
+  </div>
   <div class="table-wheel">
     <div class="table-center"><small>Table</small>7</div>
-    <div class="seat" style="--angle:0.0deg;"><div class="bubble">CS</div><div class="name">Christine Shah</div></div><div class="seat" style="--angle:30.0deg;"><div class="bubble">GS</div><div class="name">George Shah</div></div><div class="seat" style="--angle:60.0deg;"><div class="bubble">CF</div><div class="name">Connie Fong</div></div><div class="seat" style="--angle:90.0deg;"><div class="bubble">TF</div><div class="name">Tony Fong</div></div><div class="seat" style="--angle:120.0deg;"><div class="bubble">RC</div><div class="name">Ruth Chen</div></div><div class="seat" style="--angle:150.0deg;"><div class="bubble">DN</div><div class="name">David Ng</div></div><div class="seat" style="--angle:180.0deg;"><div class="bubble">SC</div><div class="name">Samara Cheung</div></div><div class="seat" style="--angle:210.0deg;"><div class="bubble">JW</div><div class="name">Jenny Wong</div></div><div class="seat" style="--angle:240.0deg;"><div class="bubble">TK</div><div class="name">Tiffany Koo</div></div><div class="seat" style="--angle:270.0deg;"><div class="bubble">PK</div><div class="name">Patrick Koo</div></div><div class="seat" style="--angle:300.0deg;"><div class="bubble">LC</div><div class="name">Lai Chun Shun</div></div><div class="seat" style="--angle:330.0deg;"><div class="bubble">SL</div><div class="name">Selina Lai</div></div>
+    <div class="seat" style="--angle:0.0deg;"><div class="bubble">CS</div><div class="name">Christine Shah</div></div><div class="seat" style="--angle:45.0deg;"><div class="bubble">GS</div><div class="name">George Shah</div></div><div class="seat" style="--angle:90.0deg;"><div class="bubble">CF</div><div class="name">Connie Fong</div></div><div class="seat" style="--angle:135.0deg;"><div class="bubble">TF</div><div class="name">Tony Fong</div></div><div class="seat" style="--angle:180.0deg;"><div class="bubble">RC</div><div class="name">Ruth Chen</div></div><div class="seat" style="--angle:225.0deg;"><div class="bubble">DN</div><div class="name">David Ng</div></div><div class="seat" style="--angle:270.0deg;"><div class="bubble">SC</div><div class="name">Samara Cheung</div></div><div class="seat" style="--angle:315.0deg;"><div class="bubble">JW</div><div class="name">Jenny Wong</div></div>
   </div>
 </div>
 <div class="table-card">
-  <div class="table-card-head"><h3>Table 8</h3><span class="count">13 guests</span></div>
+  <div class="table-card-head">
+    <div><h3>Table 8</h3><span class="count" style="color:var(--grey);font-style:italic;">Family</span></div>
+    <span class="count">12 guests</span>
+  </div>
   <div class="table-wheel">
     <div class="table-center"><small>Table</small>8</div>
-    <div class="seat" style="--angle:0.0deg;"><div class="bubble">IL</div><div class="name">Isabella Lai</div></div><div class="seat" style="--angle:27.69deg;"><div class="bubble">FC</div><div class="name">Frankie Chow</div></div><div class="seat" style="--angle:55.38deg;"><div class="bubble">AC</div><div class="name">Alex Chow</div></div><div class="seat" style="--angle:83.08deg;"><div class="bubble">BC</div><div class="name">Bosco Chow</div></div><div class="seat" style="--angle:110.77deg;"><div class="bubble">MC</div><div class="name">Mrs Chow</div></div><div class="seat" style="--angle:138.46deg;"><div class="bubble">BD</div><div class="name">Bosco's daughter</div></div><div class="seat" style="--angle:166.15deg;"><div class="bubble">EL</div><div class="name">Emily Lai</div></div><div class="seat" style="--angle:193.85deg;"><div class="bubble">YT</div><div class="name">Yuen Tat Pang</div></div><div class="seat" style="--angle:221.54deg;"><div class="bubble">YJ</div><div class="name">Yuen Jing</div></div><div class="seat" style="--angle:249.23deg;"><div class="bubble">YH</div><div class="name">Yuen Hon</div></div><div class="seat" style="--angle:276.92deg;"><div class="bubble">LM</div><div class="name">Lo Mei Chun (三姨)</div></div><div class="seat" style="--angle:304.62deg;"><div class="bubble">YH</div><div class="name">Yung Hin Shing</div></div><div class="seat" style="--angle:332.31deg;"><div class="bubble">YH</div><div class="name">Yung Hin Cheung</div></div>
+    <div class="seat" style="--angle:0.0deg;"><div class="bubble">IL</div><div class="name">Isabella Lai</div></div><div class="seat" style="--angle:30.0deg;"><div class="bubble">FC</div><div class="name">Frankie Chow</div></div><div class="seat" style="--angle:60.0deg;"><div class="bubble">AC</div><div class="name">Alex Chow</div></div><div class="seat" style="--angle:90.0deg;"><div class="bubble">BC</div><div class="name">Bosco Chow</div></div><div class="seat" style="--angle:120.0deg;"><div class="bubble">MC</div><div class="name">Mrs Chow</div></div><div class="seat" style="--angle:150.0deg;"><div class="bubble">BD</div><div class="name">Bosco's daughter</div></div><div class="seat" style="--angle:180.0deg;"><div class="bubble">EL</div><div class="name">Emily Lai</div></div><div class="seat" style="--angle:210.0deg;"><div class="bubble">YT</div><div class="name">Yuen Tat Pang</div></div><div class="seat" style="--angle:240.0deg;"><div class="bubble">YJ</div><div class="name">Yuen Jing</div></div><div class="seat" style="--angle:270.0deg;"><div class="bubble">YH</div><div class="name">Yuen Hon</div></div><div class="seat" style="--angle:300.0deg;"><div class="bubble">YH</div><div class="name">Yung Hin Shing</div></div><div class="seat" style="--angle:330.0deg;"><div class="bubble">YH</div><div class="name">Yung Hin Cheung</div></div>
   </div>
 </div>
 <div class="table-card">
-  <div class="table-card-head"><h3>Table 9</h3><span class="count">8 guests</span></div>
+  <div class="table-card-head">
+    <div><h3>Table 9</h3><span class="count" style="color:var(--grey);font-style:italic;">Friends</span></div>
+    <span class="count">12 guests</span>
+  </div>
   <div class="table-wheel">
     <div class="table-center"><small>Table</small>9</div>
-    <div class="seat" style="--angle:0.0deg;"><div class="bubble">KP</div><div class="name">Kitty Poon</div></div><div class="seat" style="--angle:45.0deg;"><div class="bubble">TC</div><div class="name">Tiffany Chin</div></div><div class="seat" style="--angle:90.0deg;"><div class="bubble">SC</div><div class="name">Stephanie Chin</div></div><div class="seat" style="--angle:135.0deg;"><div class="bubble">LP</div><div class="name">Louis Poon</div></div><div class="seat" style="--angle:180.0deg;"><div class="bubble">CL</div><div class="name">Carol Lao</div></div><div class="seat" style="--angle:225.0deg;"><div class="bubble">JL</div><div class="name">Joe Lam</div></div><div class="seat flag" style="--angle:270.0deg;"><div class="bubble">ML</div><div class="name">Macy Liu</div></div><div class="seat flag" style="--angle:315.0deg;"><div class="bubble">SL</div><div class="name">Steve Lau</div></div>
+    <div class="seat" style="--angle:0.0deg;"><div class="bubble">KP</div><div class="name">Kitty Poon</div></div><div class="seat" style="--angle:30.0deg;"><div class="bubble">TC</div><div class="name">Tiffany Chin</div></div><div class="seat" style="--angle:60.0deg;"><div class="bubble">SC</div><div class="name">Stephanie Chin</div></div><div class="seat" style="--angle:90.0deg;"><div class="bubble">LP</div><div class="name">Louis Poon</div></div><div class="seat" style="--angle:120.0deg;"><div class="bubble">CL</div><div class="name">Carol Lao</div></div><div class="seat" style="--angle:150.0deg;"><div class="bubble">JL</div><div class="name">Joe Lam</div></div><div class="seat" style="--angle:180.0deg;"><div class="bubble">ML</div><div class="name">Macy Liu</div></div><div class="seat" style="--angle:210.0deg;"><div class="bubble">SL</div><div class="name">Steve Lau</div></div><div class="seat" style="--angle:240.0deg;"><div class="bubble">PL</div><div class="name">Petty Leung</div></div><div class="seat" style="--angle:270.0deg;"><div class="bubble">RH</div><div class="name">Richard Heaver</div></div><div class="seat" style="--angle:300.0deg;"><div class="bubble">CK</div><div class="name">Chin Ka Lam</div></div><div class="seat" style="--angle:330.0deg;"><div class="bubble">MC</div><div class="name">Mrs Chin</div></div>
   </div>
 </div>
 <div class="table-card">
-  <div class="table-card-head"><h3>Table 10</h3><span class="count">12 guests</span></div>
+  <div class="table-card-head">
+    <div><h3>Table 10</h3><span class="count" style="color:var(--grey);font-style:italic;">Friends</span></div>
+    <span class="count">12 guests</span>
+  </div>
   <div class="table-wheel">
     <div class="table-center"><small>Table</small>10</div>
     <div class="seat" style="--angle:0.0deg;"><div class="bubble">WS</div><div class="name">Wong Sai Fat</div></div><div class="seat" style="--angle:30.0deg;"><div class="bubble">HL</div><div class="name">Horace Lo</div></div><div class="seat" style="--angle:60.0deg;"><div class="bubble">FL</div><div class="name">Francis Liu</div></div><div class="seat" style="--angle:90.0deg;"><div class="bubble">ML</div><div class="name">Mrs Liu</div></div><div class="seat" style="--angle:120.0deg;"><div class="bubble">CT</div><div class="name">Cheung Tai Kei</div></div><div class="seat" style="--angle:150.0deg;"><div class="bubble">MC</div><div class="name">Mrs Cheung</div></div><div class="seat" style="--angle:180.0deg;"><div class="bubble">GL</div><div class="name">George Lambert</div></div><div class="seat" style="--angle:210.0deg;"><div class="bubble">DL</div><div class="name">Doris Luk</div></div><div class="seat" style="--angle:240.0deg;"><div class="bubble">LL</div><div class="name">Law Lap Keung</div></div><div class="seat" style="--angle:270.0deg;"><div class="bubble">JT</div><div class="name">Judy Tong</div></div><div class="seat" style="--angle:300.0deg;"><div class="bubble">BL</div><div class="name">Bruce Lee</div></div><div class="seat" style="--angle:330.0deg;"><div class="bubble">SL</div><div class="name">Shirley Lee</div></div>
   </div>
 </div>
 <div class="table-card">
-  <div class="table-card-head"><h3>Table 11</h3><span class="count">12 guests</span></div>
+  <div class="table-card-head">
+    <div><h3>Table 11</h3><span class="count" style="color:var(--grey);font-style:italic;">Pilot Voices</span></div>
+    <span class="count">12 guests</span>
+  </div>
   <div class="table-wheel">
     <div class="table-center"><small>Table</small>11</div>
     <div class="seat" style="--angle:0.0deg;"><div class="bubble">SL</div><div class="name">Steven Lam</div></div><div class="seat" style="--angle:30.0deg;"><div class="bubble">JP</div><div class="name">Jasper Poon</div></div><div class="seat" style="--angle:60.0deg;"><div class="bubble">DY</div><div class="name">Danny Yeung</div></div><div class="seat" style="--angle:90.0deg;"><div class="bubble">MK</div><div class="name">Mok Ka Yau</div></div><div class="seat" style="--angle:120.0deg;"><div class="bubble">EM</div><div class="name">Eva Mok</div></div><div class="seat" style="--angle:150.0deg;"><div class="bubble">SM</div><div class="name">Stephanie Mok</div></div><div class="seat" style="--angle:180.0deg;"><div class="bubble">AN</div><div class="name">Alain Ng</div></div><div class="seat" style="--angle:210.0deg;"><div class="bubble">TM</div><div class="name">Tao Ming</div></div><div class="seat" style="--angle:240.0deg;"><div class="bubble">CT</div><div class="name">Connie Tao</div></div><div class="seat" style="--angle:270.0deg;"><div class="bubble">YK</div><div class="name">Yu Kwok Tai</div></div><div class="seat" style="--angle:300.0deg;"><div class="bubble">MY</div><div class="name">Mrs Yu</div></div><div class="seat" style="--angle:330.0deg;"><div class="bubble">JW</div><div class="name">Jackie Wong</div></div>
   </div>
 </div>
 <div class="table-card">
-  <div class="table-card-head"><h3>Table 12</h3><span class="count">11 guests</span></div>
+  <div class="table-card-head">
+    <div><h3>Table 12</h3><span class="count" style="color:var(--grey);font-style:italic;">Pilots</span></div>
+    <span class="count">12 guests</span>
+  </div>
   <div class="table-wheel">
     <div class="table-center"><small>Table</small>12</div>
-    <div class="seat" style="--angle:0.0deg;"><div class="bubble">RL</div><div class="name">Ray Lee</div></div><div class="seat" style="--angle:32.73deg;"><div class="bubble">EY</div><div class="name">Even Yam</div></div><div class="seat" style="--angle:65.45deg;"><div class="bubble">TA</div><div class="name">Thomas Au</div></div><div class="seat" style="--angle:98.18deg;"><div class="bubble">SA</div><div class="name">Sike Au</div></div><div class="seat" style="--angle:130.91deg;"><div class="bubble">PT</div><div class="name">Peter Tao</div></div><div class="seat" style="--angle:163.64deg;"><div class="bubble">CT</div><div class="name">Candy Tao</div></div><div class="seat" style="--angle:196.36deg;"><div class="bubble">WC</div><div class="name">Wang Chi Cheong</div></div><div class="seat" style="--angle:229.09deg;"><div class="bubble">BW</div><div class="name">Becky Wang</div></div><div class="seat" style="--angle:261.82deg;"><div class="bubble">EC</div><div class="name">Elmer Chiu</div></div><div class="seat" style="--angle:294.55deg;"><div class="bubble">CW</div><div class="name">Chu Wah Sau</div></div><div class="seat" style="--angle:327.27deg;"><div class="bubble">MC</div><div class="name">Mrs Chu</div></div>
+    <div class="seat" style="--angle:0.0deg;"><div class="bubble">RL</div><div class="name">Ray Lee</div></div><div class="seat" style="--angle:30.0deg;"><div class="bubble">EY</div><div class="name">Even Yam</div></div><div class="seat" style="--angle:60.0deg;"><div class="bubble">TA</div><div class="name">Thomas Au</div></div><div class="seat" style="--angle:90.0deg;"><div class="bubble">SA</div><div class="name">Sike Au</div></div><div class="seat" style="--angle:120.0deg;"><div class="bubble">PT</div><div class="name">Peter Tao</div></div><div class="seat" style="--angle:150.0deg;"><div class="bubble">CT</div><div class="name">Candy Tao</div></div><div class="seat" style="--angle:180.0deg;"><div class="bubble">WC</div><div class="name">Wang Chi Cheong</div></div><div class="seat" style="--angle:210.0deg;"><div class="bubble">BW</div><div class="name">Becky Wang</div></div><div class="seat" style="--angle:240.0deg;"><div class="bubble">EC</div><div class="name">Elmer Chiu</div></div><div class="seat" style="--angle:270.0deg;"><div class="bubble">CW</div><div class="name">Chu Wah Sau</div></div><div class="seat" style="--angle:300.0deg;"><div class="bubble">MC</div><div class="name">Mrs Chu</div></div><div class="seat" style="--angle:330.0deg;"><div class="bubble">YT</div><div class="name">Yu Tak Yee</div></div>
   </div>
 </div>
 <div class="table-card">
-  <div class="table-card-head"><h3>Table 13</h3><span class="count">12 guests</span></div>
+  <div class="table-card-head">
+    <div><h3>Table 13</h3><span class="count" style="color:var(--grey);font-style:italic;">Pilots</span></div>
+    <span class="count">12 guests</span>
+  </div>
   <div class="table-wheel">
     <div class="table-center"><small>Table</small>13</div>
-    <div class="seat" style="--angle:0.0deg;"><div class="bubble">MH</div><div class="name">Mike Hui</div></div><div class="seat" style="--angle:30.0deg;"><div class="bubble">MH</div><div class="name">Mrs Hui</div></div><div class="seat" style="--angle:60.0deg;"><div class="bubble">CK</div><div class="name">Chin Ka Lam</div></div><div class="seat" style="--angle:90.0deg;"><div class="bubble">MC</div><div class="name">Mrs Chin</div></div><div class="seat" style="--angle:120.0deg;"><div class="bubble">KK</div><div class="name">Kwong Kit Shing</div></div><div class="seat" style="--angle:150.0deg;"><div class="bubble">IW</div><div class="name">Ip Wing Cheung</div></div><div class="seat" style="--angle:180.0deg;"><div class="bubble">MI</div><div class="name">Mrs Ip</div></div><div class="seat" style="--angle:210.0deg;"><div class="bubble">SK</div><div class="name">Siu Kin Fai</div></div><div class="seat" style="--angle:240.0deg;"><div class="bubble">RH</div><div class="name">Richard Heaver</div></div><div class="seat" style="--angle:270.0deg;"><div class="bubble">PL</div><div class="name">Petty Leung</div></div><div class="seat" style="--angle:300.0deg;"><div class="bubble">CP</div><div class="name">Chan Pak Kin</div></div><div class="seat" style="--angle:330.0deg;"><div class="bubble">MC</div><div class="name">Mrs Chan</div></div>
+    <div class="seat" style="--angle:0.0deg;"><div class="bubble">LY</div><div class="name">Lui Yan Hon</div></div><div class="seat" style="--angle:30.0deg;"><div class="bubble">ML</div><div class="name">Mrs Lui</div></div><div class="seat" style="--angle:60.0deg;"><div class="bubble">LC</div><div class="name">Lam Chi Chung</div></div><div class="seat" style="--angle:90.0deg;"><div class="bubble">ML</div><div class="name">Mrs Lam</div></div><div class="seat" style="--angle:120.0deg;"><div class="bubble">IW</div><div class="name">Ip Wing Cheung</div></div><div class="seat" style="--angle:150.0deg;"><div class="bubble">MI</div><div class="name">Mrs Ip</div></div><div class="seat" style="--angle:180.0deg;"><div class="bubble">WK</div><div class="name">Wong Ki Kwok</div></div><div class="seat" style="--angle:210.0deg;"><div class="bubble">MW</div><div class="name">Mrs Wong</div></div><div class="seat" style="--angle:240.0deg;"><div class="bubble">SK</div><div class="name">Siu Kin Fai</div></div><div class="seat" style="--angle:270.0deg;"><div class="bubble">KK</div><div class="name">Kwong Kit Shing</div></div><div class="seat" style="--angle:300.0deg;"><div class="bubble">CP</div><div class="name">Chan Pak Kin</div></div><div class="seat" style="--angle:330.0deg;"><div class="bubble">MH</div><div class="name">Mike Hui</div></div>
   </div>
 </div>
 <div class="table-card">
-  <div class="table-card-head"><h3>Table 14</h3><span class="count">12 guests&nbsp;&middot;&nbsp;Venus's side</span></div>
+  <div class="table-card-head">
+    <div><h3>Table 14</h3><span class="count" style="color:var(--grey);font-style:italic;">Venus's Friends</span></div>
+    <span class="count">12 guests</span>
+  </div>
   <div class="table-wheel">
     <div class="table-center"><small>Table</small>14</div>
     <div class="seat" style="--angle:0.0deg;"><div class="bubble">KM</div><div class="name">Kai McNamme</div></div><div class="seat" style="--angle:30.0deg;"><div class="bubble">KB</div><div class="name">Kaycee Beardeaux</div></div><div class="seat" style="--angle:60.0deg;"><div class="bubble">WS</div><div class="name">Willa Smith</div></div><div class="seat" style="--angle:90.0deg;"><div class="bubble">EA</div><div class="name">Emily Arroyo</div></div><div class="seat" style="--angle:120.0deg;"><div class="bubble">IM</div><div class="name">Isabelle Mollicone</div></div><div class="seat" style="--angle:150.0deg;"><div class="bubble">TX</div><div class="name">Thomas Xu</div></div><div class="seat" style="--angle:180.0deg;"><div class="bubble">HL</div><div class="name">Hannah Li</div></div><div class="seat" style="--angle:210.0deg;"><div class="bubble">XL</div><div class="name">Xander Lee</div></div><div class="seat" style="--angle:240.0deg;"><div class="bubble">NC</div><div class="name">Natt Chan</div></div><div class="seat" style="--angle:270.0deg;"><div class="bubble">JL</div><div class="name">John Li</div></div><div class="seat" style="--angle:300.0deg;"><div class="bubble">TT</div><div class="name">Ting Ting Sham</div></div><div class="seat" style="--angle:330.0deg;"><div class="bubble">JW</div><div class="name">Justin Wang</div></div>
