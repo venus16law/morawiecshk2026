@@ -128,6 +128,12 @@ section{margin-bottom:3.4rem;}
 .t-body p{font-size:.83rem;color:var(--grey);}
 .t-body ul{margin-top:.3rem;padding-left:1.05rem;font-size:.83rem;color:var(--grey);}
 .t-body li{margin-bottom:.2rem;}
+.t-nested{display:flex;flex-direction:column;gap:.9rem;margin-top:.2rem;}
+.t-sub{position:relative;padding-left:1.1rem;}
+.t-sub::before{content:"";position:absolute;left:0;top:.5rem;width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.t-sub h4{font-size:1.02rem;font-weight:600;margin-bottom:.1rem;color:var(--ink);font-family:'Cormorant Garamond',serif;}
+.t-sub p{font-size:.83rem;color:var(--grey);margin:0;}
+.t-group-label{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--red);font-weight:600;margin-bottom:.5rem;font-family:'Inter',sans-serif;}
 .daytag{display:inline-block;background:var(--red);color:#fff;font-family:'Noto Sans TC',sans-serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;padding:.35rem .9rem;border-radius:999px;margin-bottom:1.4rem;}
 
 /* ---- pills/tags ---- */
@@ -360,7 +366,7 @@ footer b{color:var(--gold-soft);}
     <a class="navcard" data-page="dinner" href="#dinner">
       <div class="eyebrow">Friday banquet</div>
       <h3>Dinner</h3>
-      <p>Seaview Room floorplan, table-by-table seating charts, and the confirmed banquet menu.</p>
+      <p>Seaview Room floorplan and table-by-table seating charts for all 14 tables.</p>
       <div class="go">See table seating &amp; menu &rarr;</div>
     </a>
   </div>
@@ -375,7 +381,7 @@ footer b{color:var(--gold-soft);}
 <section>
   <div class="section-head">
     <div class="roundel">頁</div>
-    <div><h2>Hour by hour</h2><p class="desc">The full plan across both days, from the airport on Thursday morning to the last toast on Friday night.</p></div>
+    <div><h2>Hour by hour</h2><p class="desc">The full plan across both days &mdash; from arrival Thursday morning through the banquet dinner, served course by course, to the venue close Friday night.</p></div>
   </div>
 </section>
   
@@ -383,7 +389,7 @@ footer b{color:var(--gold-soft);}
   <span class="daytag">Thursday · October 22</span>
   <div class="timeline">
     <div class="t-row"><div class="t-time">6:00</div><div class="t-dot"></div><div class="t-body"><h3>M&amp;V arrive HK</h3><p>Wait for Annie's scheduled driver, transfer to hotel.</p></div></div>
-    <div class="t-row"><div class="t-time">10:00</div><div class="t-dot"></div><div class="t-body"><h3>Venus facial</h3><p>TST.</p></div></div>
+    <div class="t-row"><div class="t-time">10:00</div><div class="t-dot"></div><div class="t-body"><h3>Venus &mdash; aroma body massage &amp; Cellcosmet collagen facial</h3><p>10:00am&ndash;12:00pm at The Dynasty Club.</p></div></div>
     <div class="t-row"><div class="t-time">6:30</div><div class="t-dot"></div><div class="t-body"><h3>Welcome dinner</h3><p>Dynasty Club, 8th floor &mdash; Noble Room.</p><ul><li>Clara, Harry, 大姨媽, 大姨夫, Hope, Peter, Annie, Matthew, Venus, Ruth, Marso</li><li>Wedding party + overseas guests</li></ul></div></div>
     <div class="t-row"><div class="t-time">8:00</div><div class="t-dot"></div><div class="t-body"><h3>Hair combing blessing (上頭)</h3><p>Bride and groom have separate combing sessions, family only &mdash; see the Family page for the full ritual.</p></div></div>
   </div>
@@ -393,33 +399,80 @@ footer b{color:var(--gold-soft);}
   <span class="daytag">Friday · October 23</span>
   <div class="timeline">
     <div class="t-row"><div class="t-time">&mdash;</div><div class="t-dot"></div><div class="t-body"><h3>Hotel breakfast</h3></div></div>
-    <div class="t-row"><div class="t-time">10:00</div><div class="t-dot"></div><div class="t-body"><h3>Venus massage</h3><p>10&ndash;11:30am.</p></div></div>
     <div class="t-row"><div class="t-time">12:00</div><div class="t-dot"></div><div class="t-body"><h3>Dynasty Club Cafe</h3></div></div>
     <div class="t-row"><div class="t-time">1:30</div><div class="t-dot"></div><div class="t-body"><h3>Ruth make up</h3></div></div>
     <div class="t-row"><div class="t-time">2:15</div><div class="t-dot"></div><div class="t-body"><h3>Liz make up</h3></div></div>
     <div class="t-row"><div class="t-time">3:00</div><div class="t-dot"></div><div class="t-body"><h3>Getting ready begins</h3><ul>
+      <li>Venus and Matthew get ready in their Chinese tea ceremony outfits</li>
       <li>Photographer and videographer arrive</li>
       <li>Hair stylist &amp; make up for Venus; bride/bridesmaids start getting ready</li>
       <li>Champagne &amp; high tea while getting ready at The Dynasty Club</li>
       <li>Band arrives to set up</li>
     </ul></div></div>
     <div class="t-row"><div class="t-time">5:00</div><div class="t-dot"></div><div class="t-body"><h3>Wedding party arrival</h3><p>Whole wedding party needs to arrive.</p></div></div>
-    <div class="t-row"><div class="t-time">5:15</div><div class="t-dot"></div><div class="t-body"><h3>Tea ceremony &amp; photos</h3><p>5:15&ndash;5:45pm. Order: Pete &amp; Hope first, then Ruth &amp; Marso, then Justin, then all aunts and uncles.</p></div></div>
+    <div class="t-row"><div class="t-time">5:15</div><div class="t-dot"></div><div class="t-body"><h3>Tea ceremony &amp; photos</h3><p>5:15&ndash;5:45pm. Each presents gold accessories to Venus and Matthew, in order:</p><ul>
+      <li>Peter &amp; Hope</li>
+      <li>Ruth &amp; Marso</li>
+      <li>Justin</li>
+      <li>Dai Yi Ma</li>
+      <li>Fun Yi Ma</li>
+      <li>Ying Yi Ma</li>
+      <li>Emily</li>
+      <li>Clara</li>
+      <li>Sam Yi Po</li>
+      <li>Olivia</li>
+      <li>Sophia</li>
+      <li>Law Kun Chung</li>
+      <li>Moses &amp; Ida</li>
+      <li>May Law</li>
+    </ul></div></div>
     <div class="t-row"><div class="t-time">5:30</div><div class="t-dot"></div><div class="t-body"><h3>Pilot Voices sound check</h3></div></div>
     <div class="t-row"><div class="t-time">6:00</div><div class="t-dot"></div><div class="t-body"><h3>Guests begin to arrive</h3><ul>
       <li>Cocktail hour &mdash; bridesmaids and groomsmen help receive guests, table seating, lining up for photos</li>
       <li>Aunts sit at gifts table</li>
     </ul></div></div>
-    <div class="t-row"><div class="t-time">6:30</div><div class="t-dot"></div><div class="t-body"><h3>Venus changes</h3><p>Into white outfit.</p></div></div>
-    <div class="t-row"><div class="t-time">6:35</div><div class="t-dot"></div><div class="t-body"><h3>Pilot Voices, 4 songs</h3><p>6:35&ndash;6:55pm.</p></div></div>
-    <div class="t-row"><div class="t-time">7:00</div><div class="t-dot"></div><div class="t-body"><h3>March in</h3><p>Toast with parents and V&amp;M, Marso welcome speech (3 minutes). Family sings Stand By Me.</p></div></div>
-    <div class="t-row"><div class="t-time">7:10</div><div class="t-dot"></div><div class="t-body"><h3>Dinner begins</h3><ul>
-      <li>Justin introduces Hope to pray before dinner</li>
-      <li>Band plays during dinner</li>
-      <li>After the fish course, before chicken &mdash; ask Francis Liu to sing one song</li>
-      <li>Venus changes again into blue dress</li>
-      <li>Table toasts follow; Auntie Clara signs up the next singers (cousins, dads' friends, etc.)</li>
+    <div class="t-row"><div class="t-time">6:25</div><div class="t-dot"></div><div class="t-body"><h3>Pilot Voices &mdash; 6 songs</h3><p>6:25pm start &mdash; hard stop at 6:55pm.</p><div class="t-nested" style="margin-top:.6rem;">
+      <div class="t-sub"><h4>Jasper</h4><p>Aoi Hen Gan Dan</p></div>
+      <div class="t-sub"><h4>Danny</h4><p>Sway</p></div>
+      <div class="t-sub"><h4>Alain</h4><p>Just the Two of Us</p></div>
+      <div class="t-sub"><h4>Rockman</h4><p>I Just Called to Say I Love You</p></div>
+      <div class="t-sub"><h4>Tai Ko</h4><p>Yat Seng Zhong Jui Aoi</p></div>
+      <div class="t-sub"><h4>Steven</h4><p>Right Here Waiting</p></div>
+    </div></div></div>
+    <div class="t-row"><div class="t-time">6:30</div><div class="t-dot"></div><div class="t-body"><h3>Venus changes into white outfit</h3><p>Switch into western accessories.</p></div></div>
+    <div class="t-row"><div class="t-time">7:00</div><div class="t-dot bold" style="background:var(--red);border-color:var(--red);"></div><div class="t-body"><h3>March in</h3><ul>
+      <li>Marso gives the welcome speech and introduces Venus and Matthew</li>
+      <li>Matthew and Venus say a few words of thanks</li>
+      <li><strong>Band Set 1</strong> plays after (7:00&ndash;7:45pm)</li>
     </ul></div></div>
+    <div class="t-row"><div class="t-time">7:05</div><div class="t-dot bold" style="background:var(--red);border-color:var(--red);"></div><div class="t-body"><h3>Dinner begins</h3><p>Justin introduces Hope to pray before the first course.</p></div></div>
+    <div class="t-row"><div class="t-time">7:10</div><div class="t-dot"></div><div class="t-body"><h3 style="font-family:'Noto Serif TC',serif;font-size:1.05rem;">滿堂喜慶 <small style="font-family:'Noto Sans TC',sans-serif;font-weight:400;color:#8a7e6e;font-size:.78rem;">鴻運乳豬全體</small></h3><p>Barbecued Whole Suckling Pig</p></div></div>
+    <div class="t-row"><div class="t-time">7:20</div><div class="t-dot"></div><div class="t-body"><h3 style="font-family:'Noto Serif TC',serif;font-size:1.05rem;">鴛鴦永結 <small style="font-family:'Noto Sans TC',sans-serif;font-weight:400;color:#8a7e6e;font-size:.78rem;">碧綠鮮蝦腰纏珊瑚桂花蚌</small></h3><p>Sautéed Prawn and Coral Clam with Vegetables</p></div></div>
+    <div class="t-row"><div class="t-time">7:30</div><div class="t-dot"></div><div class="t-body"><h3 style="font-family:'Noto Serif TC',serif;font-size:1.05rem;">相思邂逅 <small style="font-family:'Noto Sans TC',sans-serif;font-weight:400;color:#8a7e6e;font-size:.78rem;">雞茸燴燕窩</small></h3><p>Braised Bird's Nest Soup with Minced Chicken</p></div></div>
+    <div class="t-row"><div class="t-time">7:40</div><div class="t-dot"></div><div class="t-body"><h3 style="font-family:'Noto Serif TC',serif;font-size:1.05rem;">緣定今生 <small style="font-family:'Noto Sans TC',sans-serif;font-weight:400;color:#8a7e6e;font-size:.78rem;">蠔皇翡翠原隻三頭鮑魚扣鵝掌</small></h3><p>Braised Whole Abalone with Goose Web in Oyster Sauce</p></div></div>
+    <div class="t-row"><div class="t-time">7:45</div><div class="t-dot"></div><div class="t-body"><h3>Band rests</h3><p>15 min break (7:45&ndash;8:00pm).</p></div></div>
+    <div class="t-row"><div class="t-time">7:50</div><div class="t-dot"></div><div class="t-body"><div class="t-nested">
+      <div class="t-sub"><h4 style="font-family:'Noto Serif TC',serif;">福祿有餘 <small style="font-family:'Noto Sans TC',sans-serif;font-weight:400;color:#8a7e6e;font-size:.78rem;">清蒸海星斑</small></h4><p>Steamed Coral Grouper &mdash; No.5 fish course. Table toasts follow.</p></div>
+      <div class="t-sub"><h4>Venus changes into red dress</h4><p>After the fish course, before table toasts.</p></div>
+    </div></div></div>
+    <div class="t-row"><div class="t-time">8:00</div><div class="t-dot bold" style="background:var(--red);border-color:var(--red);"></div><div class="t-body"><h3>Table toasts &amp; Band Set 2</h3><ul><li>Table toasts begin, lasting ~30 min (ending around 8:30pm)</li><li>Auntie Clara signs up the next singers (cousins, dads&rsquo; friends, etc.)</li><li><strong>Band Set 2</strong> plays 8:00&ndash;8:45pm</li></ul></div></div>
+    <div class="t-row"><div class="t-time">8:30</div><div class="t-dot"></div><div class="t-body"><h3>Singers</h3><ul><li>Francis Liu sings</li><li>Ruth Ng sings next</li><li>Family sings Stand by Me &mdash; ending around 8:45pm</li></ul></div></div>
+    <div class="t-row"><div class="t-time">8:45</div><div class="t-dot"></div><div class="t-body"><div class="t-nested">
+      <div class="t-sub"><h4>Band rests</h4><p>Break (8:45&ndash;9:05pm).</p></div>
+      <div class="t-sub"><h4 style="font-family:'Noto Serif TC',serif;">金鳳結緣 <small style="font-family:'Noto Sans TC',sans-serif;font-weight:400;color:#8a7e6e;font-size:.78rem;">蒜香脆皮雞</small></h4><p>Deep-fried Crispy Chicken with Crispy Garlic &mdash; No.6</p></div>
+    </div></div></div>
+    <div class="t-row"><div class="t-time">8:55</div><div class="t-dot"></div><div class="t-body"><div class="t-group-label">Courses 7 &amp; 8</div><div class="t-nested">
+      <div class="t-sub"><h4 style="font-family:'Noto Serif TC',serif;">良辰美景 <small style="font-family:'Noto Sans TC',sans-serif;font-weight:400;color:#8a7e6e;font-size:.78rem;">蒜香櫻花蝦海鮮炒飯</small></h4><p>Fried Rice with Seafood, Preserved Vegetables and Egg White</p></div>
+      <div class="t-sub"><h4 style="font-family:'Noto Serif TC',serif;">白頭到老 <small style="font-family:'Noto Sans TC',sans-serif;font-weight:400;color:#8a7e6e;font-size:.78rem;">鮑汁蝦籽燴長壽伊府麵</small></h4><p>Fried Rice with Sakura Shrimp, Seafood and Garlic</p></div>
+    </div></div></div>
+    <div class="t-row"><div class="t-time">9:05</div><div class="t-dot bold" style="background:var(--red);border-color:var(--red);"></div><div class="t-body"><div class="t-nested">
+      <div class="t-sub"><h4>Band Set 3 &amp; karaoke</h4><p><strong>Band Set 3</strong> plays 9:05&ndash;9:50pm. Karaoke for guests begins (up to 8 songs).</p></div>
+      <div class="t-sub"><h4 style="font-family:'Noto Serif TC',serif;">天賜良緣 <small style="font-family:'Noto Sans TC',sans-serif;font-weight:400;color:#8a7e6e;font-size:.78rem;">合桃露湯圓</small></h4><p>Sweetened Walnut Cream with Rice Dumpling &mdash; No.9</p></div>
+      <div class="t-sub"><h4 style="font-family:'Noto Serif TC',serif;">好事成雙 <small style="font-family:'Noto Sans TC',sans-serif;font-weight:400;color:#8a7e6e;font-size:.78rem;">美點雙輝映</small></h4><p>Chinese Petit Fours &mdash; No.10</p></div>
+      <div class="t-sub"><h4 style="font-family:'Noto Serif TC',serif;">甜甜蜜蜜 <small style="font-family:'Noto Sans TC',sans-serif;font-weight:400;color:#8a7e6e;font-size:.78rem;">時令鮮果盤</small></h4><p>Seasonal Fresh Fruit Platter &mdash; No.11</p></div>
+    </div></div></div>
+    <div class="t-row"><div class="t-time">10:00</div><div class="t-dot bold" style="background:var(--red);border-color:var(--red);"></div><div class="t-body"><h3>Closing</h3><p>Venus changes into her final dress.</p></div></div>
+    <div class="t-row"><div class="t-time">10:30</div><div class="t-dot"></div><div class="t-body"><h3>Venue close</h3><p>The Dynasty Club closes at 10:30pm.</p></div></div>
   </div>
 </section>
 
@@ -470,14 +523,24 @@ footer b{color:var(--gold-soft);}
 <section>
   <div class="section-head">
     <div class="roundel">茶</div>
-    <div><h2>Tea ceremony order &mdash; Friday, 5:15&ndash;5:45pm</h2><p class="desc">Seaview Room, before guests arrive.</p></div>
+    <div><h2>Tea ceremony order &mdash; Friday, 5:15&ndash;5:45pm</h2><p class="desc">Seaview Room, before guests arrive. Each presents gold accessories to Venus and Matthew, in order.</p></div>
   </div>
   <div class="card cardpad">
     <div class="timeline" style="max-width:none;">
-      <div class="t-row"><div class="t-time">1st</div><div class="t-dot"></div><div class="t-body"><h3>Pete &amp; Hope</h3></div></div>
-      <div class="t-row"><div class="t-time">2nd</div><div class="t-dot"></div><div class="t-body"><h3>Ruth &amp; Marso</h3></div></div>
-      <div class="t-row"><div class="t-time">3rd</div><div class="t-dot"></div><div class="t-body"><h3>Justin</h3></div></div>
-      <div class="t-row"><div class="t-time">4th</div><div class="t-dot"></div><div class="t-body"><h3>All aunts and uncles</h3></div></div>
+      <div class="t-row"><div class="t-time">1</div><div class="t-dot"></div><div class="t-body"><h3>Peter &amp; Hope</h3></div></div>
+      <div class="t-row"><div class="t-time">2</div><div class="t-dot"></div><div class="t-body"><h3>Ruth &amp; Marso</h3></div></div>
+      <div class="t-row"><div class="t-time">3</div><div class="t-dot"></div><div class="t-body"><h3>Justin</h3></div></div>
+      <div class="t-row"><div class="t-time">4</div><div class="t-dot"></div><div class="t-body"><h3>Dai Yi Ma</h3></div></div>
+      <div class="t-row"><div class="t-time">5</div><div class="t-dot"></div><div class="t-body"><h3>Fun Yi Ma</h3></div></div>
+      <div class="t-row"><div class="t-time">6</div><div class="t-dot"></div><div class="t-body"><h3>Ying Yi Ma</h3></div></div>
+      <div class="t-row"><div class="t-time">7</div><div class="t-dot"></div><div class="t-body"><h3>Emily</h3></div></div>
+      <div class="t-row"><div class="t-time">8</div><div class="t-dot"></div><div class="t-body"><h3>Clara</h3></div></div>
+      <div class="t-row"><div class="t-time">9</div><div class="t-dot"></div><div class="t-body"><h3>Sam Yi Po</h3></div></div>
+      <div class="t-row"><div class="t-time">10</div><div class="t-dot"></div><div class="t-body"><h3>Olivia</h3></div></div>
+      <div class="t-row"><div class="t-time">11</div><div class="t-dot"></div><div class="t-body"><h3>Sophia</h3></div></div>
+      <div class="t-row"><div class="t-time">12</div><div class="t-dot"></div><div class="t-body"><h3>Law Kun Chung</h3></div></div>
+      <div class="t-row"><div class="t-time">13</div><div class="t-dot"></div><div class="t-body"><h3>Moses &amp; Ida</h3></div></div>
+      <div class="t-row"><div class="t-time">14</div><div class="t-dot"></div><div class="t-body"><h3>May Law</h3></div></div>
     </div>
   </div>
 </section>
@@ -491,7 +554,7 @@ footer b{color:var(--gold-soft);}
 <section>
   <div class="section-head">
     <div class="roundel">頁</div>
-    <div><h2>Table seating &amp; menu</h2><p class="desc">The Seaview Room floorplan, table-by-table seating, and the confirmed wedding menu.</p></div>
+    <div><h2>Table seating</h2><p class="desc">The Seaview Room floorplan and table-by-table seating. The confirmed menu now lives in the Rundown, sequenced course by course.</p></div>
   </div>
 </section>
   
@@ -660,18 +723,7 @@ footer b{color:var(--gold-soft);}
   </div>
   </div>
 </section>
-
-<section>
-  <div class="section-head">
-    <div class="roundel">膳</div>
-    <div><h2>Confirmed menu</h2><p class="desc">The Dynasty Club's eleven-course wedding menu, confirmed with Ms Lai Yin Fong Ruth.</p></div>
-  </div>
-  <div class="card cardpad">
-    <div class="menu-list"><div class="menu-item"><div class="mnum">01</div><div><div class="cn">滿堂喜慶 <small>鴻運乳豬全體</small></div><div class="en">Barbecued Whole Suckling Pig</div></div></div><div class="menu-item"><div class="mnum">02</div><div><div class="cn">鴛鴦永結 <small>碧綠鮮蝦腰纏珊瑚桂花蚌</small></div><div class="en">Sautéed Prawn and Coral Clam with Vegetables</div></div></div><div class="menu-item"><div class="mnum">03</div><div><div class="cn">相思邂逅 <small>雞茸燴燕窩</small></div><div class="en">Braised Bird's Nest Soup with Minced Chicken</div></div></div><div class="menu-item"><div class="mnum">04</div><div><div class="cn">緣定今生 <small>蠔皇翡翠原隻三頭鮑魚扣鵝掌</small></div><div class="en">Braised Whole Abalone with Goose Web in Oyster Sauce</div></div></div><div class="menu-item"><div class="mnum">05</div><div><div class="cn">福祿有餘 <small>清蒸海星斑</small></div><div class="en">Steamed Coral Grouper</div></div></div><div class="menu-item"><div class="mnum">06</div><div><div class="cn">金鳳結緣 <small>蒜香脆皮雞</small></div><div class="en">Deep-fried Crispy Chicken with Crispy Garlic</div></div></div><div class="menu-item"><div class="mnum">07</div><div><div class="cn">良辰美景 <small>蒜香櫻花蝦海鮮炒飯</small></div><div class="en">Fried Rice with Seafood, Preserved Vegetables and Egg White</div></div></div><div class="menu-item"><div class="mnum">08</div><div><div class="cn">白頭到老 <small>鮑汁蝦籽燴長壽伊府麵</small></div><div class="en">Fried Rice with Sakura Shrimp, Seafood and Garlic</div></div></div><div class="menu-item"><div class="mnum">09</div><div><div class="cn">天賜良緣 <small>合桃露湯圓</small></div><div class="en">Sweetened Walnut Cream with Rice Dumpling</div></div></div><div class="menu-item"><div class="mnum">10</div><div><div class="cn">好事成雙 <small>美點雙輝映</small></div><div class="en">Chinese Petit Fours</div></div></div><div class="menu-item"><div class="mnum">11</div><div><div class="cn">甜甜蜜蜜 <small>時令鮮果盤</small></div><div class="en">Seasonal Fresh Fruit Platter</div></div></div></div>
-  </div>
-</section>
-
-  </main>
+    </main>
 </section>
 
 <section class="page" id="page-party">
@@ -724,16 +776,19 @@ footer b{color:var(--gold-soft);}
     <div class="wp-tl-item"><div class="wp-tl-time">2:15</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">Liz Nichols &mdash; make up</div><div class="wp-tl-note">At The Dynasty Club</div></div></div>
     <div class="wp-tl-item"><div class="wp-tl-time">3:00</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">Bridesmaids &mdash; getting ready begins</div><div class="wp-tl-note">Photographer and videographer arrive &mdash; getting-ready moments will be captured. Hair stylist and make up for Venus begins. Champagne and high tea provided while getting ready at The Dynasty Club. Band arrives to set up in the Seaview Room.</div></div></div>
     <div class="wp-tl-item"><div class="wp-tl-time">5:00</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">Whole wedding party arrives</div><div class="wp-tl-note">Dynasty Club, Seaview Room, 7F &mdash; groomsmen join here</div></div></div>
-    <div class="wp-tl-item"><div class="wp-tl-time">5:15</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">Tea ceremony &amp; photos</div><div class="wp-tl-note">5:15&ndash;5:45pm. Order: Pete &amp; Hope → Ruth &amp; Marso → Justin → all aunts &amp; uncles. Wedding party present throughout.</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">5:15</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">Tea ceremony &amp; photos</div><div class="wp-tl-note">5:15&ndash;5:45pm. Each presents gold accessories to Venus and Matthew, in order (see the Family tab for the full list). Wedding party present throughout.</div></div></div>
     <div class="wp-tl-item"><div class="wp-tl-time">5:30</div><div class="wp-tl-dot"></div><div class="wp-tl-body"><div class="wp-tl-label">Pilot Voices sound check</div><div class="wp-tl-note">Band is setting up &mdash; be aware of activity in the room</div></div></div>
     <div class="wp-tl-item"><div class="wp-tl-time">6:00</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">Guests begin arriving &mdash; all hands on deck</div><div class="wp-tl-note">Bridesmaids and groomsmen receive guests at the door, direct people to their table seating, help form photo lines, and keep the energy up. Aunts are stationed at the gifts table.</div></div></div>
-    <div class="wp-tl-item"><div class="wp-tl-time">6:30</div><div class="wp-tl-dot"></div><div class="wp-tl-body"><div class="wp-tl-label">Venus changes into white outfit</div><div class="wp-tl-note">Bridesmaids assist if needed</div></div></div>
-    <div class="wp-tl-item"><div class="wp-tl-time">6:35</div><div class="wp-tl-dot"></div><div class="wp-tl-body"><div class="wp-tl-label">Pilot Voices performs &mdash; 4 songs</div><div class="wp-tl-note">6:35&ndash;6:55pm. Continue receiving any late-arriving guests.</div></div></div>
-    <div class="wp-tl-item"><div class="wp-tl-time">7:00</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">March in &amp; toasts</div><div class="wp-tl-note">Toast with parents and V&amp;M &mdash; Marso delivers welcome speech (3 min). Family sings Stand by Me together.</div></div></div>
-    <div class="wp-tl-item"><div class="wp-tl-time">7:10</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">Justin introduces Hope to pray &mdash; dinner begins</div><div class="wp-tl-note">Justin Law cues Hope Morawiec to say grace before the first course. Band plays throughout dinner.</div></div></div>
-    <div class="wp-tl-item"><div class="wp-tl-time">~mid</div><div class="wp-tl-dot"></div><div class="wp-tl-body"><div class="wp-tl-label">Francis Liu sings</div><div class="wp-tl-note">After the fish course, before chicken &mdash; someone needs to cue Francis Liu to come up.</div></div></div>
-    <div class="wp-tl-item"><div class="wp-tl-time">~mid</div><div class="wp-tl-dot"></div><div class="wp-tl-body"><div class="wp-tl-label">Venus changes into blue dress</div><div class="wp-tl-note">Bridesmaids assist if needed</div></div></div>
-    <div class="wp-tl-item"><div class="wp-tl-time">later</div><div class="wp-tl-dot"></div><div class="wp-tl-body"><div class="wp-tl-label">Table toasts &amp; open singing</div><div class="wp-tl-note">Auntie Clara signs up the next singers from tables &mdash; cousins, dads&rsquo; friends, etc. Keep the energy going and cheer everyone on.</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">6:25</div><div class="wp-tl-dot"></div><div class="wp-tl-body"><div class="wp-tl-label">Pilot Voices performs &mdash; 6 songs</div><div class="wp-tl-note">6:25pm start, hard stop 6:55pm. Continue receiving any late-arriving guests.</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">6:30</div><div class="wp-tl-dot"></div><div class="wp-tl-body"><div class="wp-tl-label">Venus changes into white outfit</div><div class="wp-tl-note">Switch into western accessories. Bridesmaids assist if needed.</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">7:00</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">March in</div><div class="wp-tl-note">Marso gives the welcome speech and introduces Venus and Matthew, who say a few words of thanks. Band Set 1 plays 7:00&ndash;7:45pm, then rests 7:45&ndash;8:00pm.</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">7:05</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">Justin introduces Hope to pray &mdash; dinner begins</div><div class="wp-tl-note">Justin Law cues Hope Morawiec to say grace before the first course. Courses 1&ndash;5 served 7:10&ndash;7:50pm.</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">7:50</div><div class="wp-tl-dot"></div><div class="wp-tl-body"><div class="wp-tl-label">Venus changes into red dress</div><div class="wp-tl-note">After the No.5 fish course, before table toasts. Bridesmaids assist if needed.</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">8:00</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">Table toasts &amp; Band Set 2</div><div class="wp-tl-note">Table toasts begin (~30 min, ending around 8:30pm). Auntie Clara signs up the next singers &mdash; cousins, dads&rsquo; friends, etc. Keep the energy going and cheer everyone on. Band Set 2 plays 8:00&ndash;8:45pm, then rests 8:45&ndash;9:05pm.</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">8:30</div><div class="wp-tl-dot"></div><div class="wp-tl-body"><div class="wp-tl-label">Singers &mdash; Francis Liu, Ruth Ng, then Stand by Me</div><div class="wp-tl-note">Francis Liu sings, then Ruth Ng, then the family sings Stand by Me &mdash; ending around 8:45pm. Cue each singer up in turn.</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">9:05</div><div class="wp-tl-dot"></div><div class="wp-tl-body"><div class="wp-tl-label">Band Set 3 &amp; karaoke</div><div class="wp-tl-note">Band Set 3 plays 9:05&ndash;9:50pm. Karaoke opens for guests (up to 8 songs) &mdash; help keep it lively.</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">10:00</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">Closing</div><div class="wp-tl-note">Venus changes into her final dress. Bridesmaids assist if needed.</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">10:30</div><div class="wp-tl-dot"></div><div class="wp-tl-body"><div class="wp-tl-label">Venue close</div><div class="wp-tl-note">The Dynasty Club closes at 10:30pm.</div></div></div>
   </div>
 </div>
 
@@ -753,20 +808,21 @@ footer b{color:var(--gold-soft);}
 
   <div class="wp-card">
     <div class="wp-card-sub">Tea ceremony &mdash; 5:15pm</div>
-    <p>Be present and supportive. The order is Pete &amp; Hope first, then Ruth &amp; Marso, then Justin, then all aunts and uncles. Help keep the flow moving and make sure the next family members are ready to step in on time.</p>
+    <p>Be present and supportive. Presenters go in order (Peter &amp; Hope → Ruth &amp; Marso → Justin → the aunts &amp; family, see the Family tab), each presenting gold accessories to Venus and Matthew. Help keep the flow moving and make sure the next person is ready to step in on time.</p>
   </div>
 
   <div class="wp-card">
     <div class="wp-card-sub">Justin Law &mdash; two specific cues</div>
     <ul>
-      <li><strong>7:00pm march in:</strong> Justin is walking in with the family and helps lead Stand by Me with the family group after Marso&rsquo;s speech.</li>
+      <li><strong>7:00pm march in:</strong> Justin walks in with the family for the parents&rsquo; toast and Marso&rsquo;s welcome speech.</li>
       <li><strong>7:10pm dinner prayer:</strong> Justin introduces Hope Morawiec to say grace before the first course begins. Be ready, know your cue.</li>
+      <li><strong>~8:40pm:</strong> After Francis Liu and Ruth Ng sing, Justin helps lead the family in Stand by Me (ending around 8:45pm).</li>
     </ul>
   </div>
 
   <div class="wp-card">
     <div class="wp-card-sub">During dinner</div>
-    <p>Once seated, your job is to enjoy the night &mdash; but keep one ear open. Cheer on the table toasts, support Francis Liu when he sings, and help Auntie Clara sign up singers if the queue slows down. If Venus needs help changing outfits, bridesmaids assist quickly and quietly.</p>
+    <p>Once seated, your job is to enjoy the night &mdash; but keep one ear open. Cheer on the table toasts, support the singers (Francis Liu, then Ruth Ng, then the family&rsquo;s Stand by Me), and help Auntie Clara sign up karaoke singers if the queue slows down. Venus changes into a red dress for table toasts (~7:50pm) and a final dress at closing (10:00pm) &mdash; bridesmaids assist quickly and quietly.</p>
   </div>
 
   <div class="wp-card">
