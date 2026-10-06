@@ -227,6 +227,24 @@ table.simple tr:last-child td{border-bottom:none;}
   .people-grid{grid-template-columns:1fr;}
 }
 
+/* ---- RSVP summary (Dinner tab) ---- */
+.rsvp-summary{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:1.3rem 1.4rem;margin-bottom:1.6rem;box-shadow:0 10px 28px -22px rgba(42,33,28,.3);}
+.rsvp-stats{display:flex;gap:2.2rem;flex-wrap:wrap;margin-bottom:1.1rem;padding-bottom:1.1rem;border-bottom:1px solid var(--line);}
+.rsvp-stat{display:flex;flex-direction:column;}
+.rsvp-stat-num{font-family:'Cormorant Garamond',serif;font-size:2.1rem;line-height:1;color:var(--ink);}
+.rsvp-stat-label{font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--grey);margin-top:.25rem;}
+.rsvp-followup-title{font-family:'Inter',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.03em;color:var(--red);margin-bottom:.7rem;}
+.rsvp-followup-row{display:flex;gap:.8rem;padding:.42rem 0;border-bottom:1px dashed var(--line);font-size:.82rem;line-height:1.45;}
+.rsvp-followup-row:last-child{border-bottom:none;}
+.rsvp-followup-table{flex-shrink:0;width:68px;font-weight:700;color:var(--ink);}
+.rsvp-followup-names{color:var(--grey);}
+@media(max-width:640px){
+  .rsvp-stats{gap:1.4rem;}
+  .rsvp-stat-num{font-size:1.7rem;}
+  .rsvp-followup-row{flex-direction:column;gap:.15rem;}
+  .rsvp-followup-table{width:auto;}
+}
+
 footer{background:var(--ink);color:rgba(255,255,255,.6);text-align:center;padding:2.6rem 1.4rem;font-size:.76rem;}
 footer b{color:var(--gold-soft);}
 
@@ -338,7 +356,7 @@ footer b{color:var(--gold-soft);}
     <div><h2>Key events</h2><p class="desc">The headline moments across both days, Thursday into Friday.</p></div>
   </div>
   <div class="eventcards">
-    <div class="eventcard"><span class="daytag">Thu</span><h3>Arrival</h3><div class="time">6:00am</div><p>M&amp;V land HK, driver transfer via Annie</p></div>
+    <div class="eventcard"><span class="daytag">Thu</span><h3>Arrival</h3><div class="time">6:00am</div><p>M&amp;V land HK, wait for Annie and Emily at the airport &mdash; Papa Law will pick them up.</p></div>
     <div class="eventcard"><span class="daytag">Thu</span><h3>Welcome dinner</h3><div class="time">6:30pm</div><p>Dynasty Club, 8th floor &mdash; Noble Room</p></div>
     <div class="eventcard"><span class="daytag">Thu</span><h3>Hair combing</h3><div class="time">8:00pm</div><p>上頭 blessing, bride &amp; groom separately</p></div>
     <div class="eventcard"><span class="daytag">Fri</span><h3>Tea ceremony</h3><div class="time">5:15pm</div><p>Seaview Room, before guests arrive</p></div>
@@ -582,6 +600,18 @@ footer b{color:var(--gold-soft);}
     <div class="roundel">客</div>
     <div><h2>Table seating, confirmed draft</h2><p class="desc">Aerial view of all 14 tables, with group labels, aligned to the venue's table numbering (there is no Table 4 or 14). Table 1 is the family head table. <span style="display:inline-flex;align-items:center;gap:.3rem;margin-left:.3rem;"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#E8F5E9;border:1.5px solid #2E7D32;"></span>Green = RSVP confirmed</span></p></div>
   </div>
+
+  <div class="rsvp-summary">
+    <div class="rsvp-stats">
+      <div class="rsvp-stat"><span class="rsvp-stat-num" style="color:#2E7D32;">113</span><span class="rsvp-stat-label">RSVP confirmed</span></div>
+      <div class="rsvp-stat"><span class="rsvp-stat-num" style="color:var(--gold-soft,#b89b4a);">54</span><span class="rsvp-stat-label">Pending</span></div>
+      <div class="rsvp-stat"><span class="rsvp-stat-num">167</span><span class="rsvp-stat-label">Total guests</span></div>
+    </div>
+    <div class="rsvp-followup">
+      <div class="rsvp-followup-title">Follow up needed &mdash; 54 guests across 8 tables</div>
+      <div class="rsvp-followup-row"><span class="rsvp-followup-table">Table 2</span><span class="rsvp-followup-names">Delon Yewn, Ashley Lui</span></div><div class="rsvp-followup-row"><span class="rsvp-followup-table">Table 3</span><span class="rsvp-followup-names">Louis Poon, Christine Shah, George Shah</span></div><div class="rsvp-followup-row"><span class="rsvp-followup-table">Table 7</span><span class="rsvp-followup-names">Monsher Kwan, Michelle Pang, Shirley Chan, Anthony Chan, Samantha Chi, Daniel Leung, Rain Tsang, Tiffany Koo, Patrick Koo, Katherine Lu, Anita Young</span></div><div class="rsvp-followup-row"><span class="rsvp-followup-table">Table 10</span><span class="rsvp-followup-names">Steven Lam, Danny Yeung, Yu Kwok Tai, May Chu, Jackie Wong, Alain Ng, Tao Ming, Connie Tao, Mike Hui, Chan Pak Kin</span></div><div class="rsvp-followup-row"><span class="rsvp-followup-table">Table 12</span><span class="rsvp-followup-names">Lui Yan Hon, Mrs Lui, Lim Chi Chung, Mrs Lim, Ip Wing Cheung, Kit Chan, Wong Ki Kwok, Alice Wong, Wong Chung Kan, Chin Wai Chung, Chu Wah Sau, Janet Chu</span></div><div class="rsvp-followup-row"><span class="rsvp-followup-table">Table 13</span><span class="rsvp-followup-names">Wong Sai Fat, Horace Lo, Cecilia Lo, Cheung Tai Kei, Doris Luk</span></div><div class="rsvp-followup-row"><span class="rsvp-followup-table">Table 15</span><span class="rsvp-followup-names">Thomas Au, Siki Au, Peter To, Candy To, Wang Chi Cheong, Elmer Chiu</span></div><div class="rsvp-followup-row"><span class="rsvp-followup-table">Table 16</span><span class="rsvp-followup-names">Richard Haver, Petty Leung, Kwong Kit Shing, Chin Ka Lam, Fiona Chin</span></div>
+    </div>
+  </div>
   <div class="tables-grid">
 <div class="table-card">
   <div class="table-card-head">
@@ -750,7 +780,7 @@ footer b{color:var(--gold-soft);}
   <div class="wp-divider">Bridesmaids</div>
   <div class="people-grid">
     <div class="person-card"><div class="person-initial">LN</div><div class="person-info"><div class="person-name">Liz Nichols</div><div class="person-role">Bridesmaid &middot; Table 1</div></div></div>
-    <div class="person-card"><div class="person-initial">AM</div><div class="person-info"><div class="person-name">Annie Morawiec</div><div class="person-role">Bridesmaid &middot; Table 1</div></div></div>
+    <div class="person-card"><div class="person-initial">SN</div><div class="person-info"><div class="person-name">Shoma Nath</div><div class="person-role">Bridesmaid &middot; Table 5</div></div></div>
     <div class="person-card"><div class="person-initial">WS</div><div class="person-info"><div class="person-name">Willa Smith</div><div class="person-role">Bridesmaid &middot; Table 5</div></div></div>
     <div class="person-card"><div class="person-initial">EA</div><div class="person-info"><div class="person-name">Emily Arroyo</div><div class="person-role">Bridesmaid &middot; Table 5</div></div></div>
     <div class="person-card"><div class="person-initial">IM</div><div class="person-info"><div class="person-name">Isabelle Mollicone</div><div class="person-role">Bridesmaid &middot; Table 5</div></div></div>
