@@ -227,6 +227,20 @@ table.simple tr:last-child td{border-bottom:none;}
   .people-grid{grid-template-columns:1fr;}
 }
 
+/* ---- In and out table (Overview) ---- */
+.travel-count{font-size:.86rem;color:var(--grey);margin-bottom:.9rem;}
+.travel-count b{color:var(--red);font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:700;}
+table.travel{width:100%;border-collapse:collapse;}
+table.travel th{text-align:left;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);padding:.5rem .5rem;border-bottom:1.5px solid var(--gold);}
+table.travel td{padding:.3rem .4rem;border-bottom:1px solid var(--line);vertical-align:middle;}
+table.travel td.who{font-weight:500;font-size:.92rem;width:40%;padding-left:.5rem;}
+table.travel textarea{display:block;resize:none;overflow:hidden;line-height:1.35;width:100%;font:inherit;font-size:.9rem;color:var(--ink);background:transparent;border:1px solid transparent;padding:.5rem .5rem;border-radius:0;min-width:0;}
+table.travel textarea::placeholder{color:var(--gold);font-size:1.1rem;}
+table.travel textarea:hover{background:var(--cream);}
+table.travel textarea:focus{outline:2px solid var(--gold);outline-offset:-1px;background:#fff;}
+.travel-note{font-size:.78rem;color:var(--grey);margin-top:1rem;}
+@media(max-width:600px){table.travel textarea{font-size:16px;padding:.5rem .25rem;}table.travel td{padding:.3rem .15rem;}table.travel td.who{width:30%;font-size:.84rem;padding-left:.3rem;}table.travel th{padding:.5rem .25rem;}}
+
 footer{background:var(--ink);color:rgba(255,255,255,.6);text-align:center;padding:2.6rem 1.4rem;font-size:.76rem;}
 footer b{color:var(--gold-soft);}
 
@@ -346,6 +360,20 @@ footer b{color:var(--gold-soft);}
   </div>
 </section>
 
+<section id="travel">
+  <div class="section-head">
+    <div class="roundel">航</div>
+    <div><h2>In and out</h2><p class="desc">Tap a box to add when you land in Hong Kong and when you fly out (e.g. Thu Oct 22 6am). HK time.</p></div>
+  </div>
+  <div class="card cardpad">
+    <div class="travel-count" id="travel-count" aria-live="polite"></div>
+    <table class="travel">
+      <thead><tr><th>Who</th><th>In</th><th>Out</th></tr></thead>
+      <tbody id="travel-body"></tbody>
+    </table>
+  </div>
+</section>
+
 <section>
   <div class="section-head">
     <div class="roundel">頁</div>
@@ -401,11 +429,13 @@ footer b{color:var(--gold-soft);}
   <div class="timeline">
     <div class="t-row"><div class="t-time">&mdash;</div><div class="t-dot"></div><div class="t-body"><h3>Hotel breakfast</h3></div></div>
     <div class="t-row"><div class="t-time">12:00</div><div class="t-dot"></div><div class="t-body"><h3>Dynasty Club Cafe</h3></div></div>
-    <div class="t-row"><div class="t-time">3:00</div><div class="t-dot"></div><div class="t-body"><h3>Getting ready begins</h3><ul>
+    <div class="t-row"><div class="t-time">1:30</div><div class="t-dot"></div><div class="t-body"><h3>Getting ready begins</h3><ul>
+      <li>Hair stylist &amp; make up for Venus, Ruth and Liz</li>
+      <li>Bridesmaids start getting ready</li>
       <li>Venus and Matthew get ready in their Chinese tea ceremony outfits</li>
-      <li>Photographer and videographer arrive</li>
-      <li>Hair stylist &amp; make up for Venus, Ruth and Liz; bridesmaids also start getting ready</li>
       <li>Champagne &amp; high tea while getting ready at The Dynasty Club</li>
+    </ul></div></div>
+    <div class="t-row"><div class="t-time">3:00</div><div class="t-dot"></div><div class="t-body"><h3>Photographer &amp; videographer arrive</h3><ul>
       <li>Big Band arrives to set up</li>
     </ul></div></div>
     <div class="t-row"><div class="t-time">5:00</div><div class="t-dot"></div><div class="t-body"><h3>Wedding party arrival</h3><p>Whole wedding party needs to arrive. Pilot Voices band also arrives.</p></div></div>
@@ -771,11 +801,12 @@ footer b{color:var(--gold-soft);}
 
   <div class="notice" style="margin-bottom:1.4rem;">
     <div class="notice-icon">💄</div>
-    <p><strong>Bridesmaids</strong> &mdash; your day starts mid-afternoon, well before the 5pm party call. Plan your morning accordingly. <strong>Groomsmen</strong> &mdash; arrive by 5:00pm sharp.</p>
+    <p><strong>Bridesmaids</strong> &mdash; your day starts at 1:30pm with hair &amp; make up and getting ready, well before the 5pm party call. Plan your morning accordingly. <strong>Groomsmen</strong> &mdash; arrive by 5:00pm sharp.</p>
   </div>
 
   <div class="wp-timeline">
-    <div class="wp-tl-item"><div class="wp-tl-time">3:00</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">Bridesmaids &mdash; getting ready begins</div><div class="wp-tl-note">Photographer and videographer arrive &mdash; getting-ready moments will be captured. Hair stylist and make up begins for Venus, Ruth and Liz; bridesmaids also start getting ready. Champagne and high tea provided while getting ready at The Dynasty Club. Big Band arrives to set up in the Seaview Room.</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">1:30</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">Bridesmaids &mdash; getting ready begins</div><div class="wp-tl-note">Hair stylist and make up begin for Venus, Ruth and Liz; bridesmaids start getting ready. Champagne and high tea provided while getting ready at The Dynasty Club.</div></div></div>
+    <div class="wp-tl-item"><div class="wp-tl-time">3:00</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">Photographer and videographer arrive</div><div class="wp-tl-note">Getting-ready moments will be captured. Big Band arrives to set up in the Seaview Room.</div></div></div>
     <div class="wp-tl-item"><div class="wp-tl-time">5:00</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">Whole wedding party arrives</div><div class="wp-tl-note">Dynasty Club, Seaview Room, 7F &mdash; groomsmen join here. Pilot Voices band also arrives.</div></div></div>
     <div class="wp-tl-item"><div class="wp-tl-time">5:15</div><div class="wp-tl-dot bold"></div><div class="wp-tl-body"><div class="wp-tl-label">Tea ceremony &amp; photos</div><div class="wp-tl-note">5:15&ndash;5:45pm. Each presents gold accessories to Venus and Matthew, in order (see the Family tab for the full list). Wedding party present throughout.</div></div></div>
     <div class="wp-tl-item"><div class="wp-tl-time">5:30</div><div class="wp-tl-dot"></div><div class="wp-tl-body"><div class="wp-tl-label">Pilot Voices sound check</div><div class="wp-tl-note">Band is setting up &mdash; be aware of activity in the room</div></div></div>
@@ -862,6 +893,69 @@ function switchTab(id, btn){
   if(btn){ btn.classList.add('active'); }
   window.scrollTo({top:0, behavior:'smooth'});
 }
+
+/* ---- In and out table ---- */
+var TRAVEL_KEY='vm-hk-inout-v1';
+var TRAVEL_NAMES=["Venus Law", "Matthew Morawiec", "Justin Law", "Liz Nichols", "Annie Morawiec", "Shoma Nath", "Izzy Mollicone", "Willa Smith", "Emily Arroyo", "Eva Crouse", "Henry Moreno", "Kai McNamee", "Kaycee Beardeaux", "Thomas Xu", "Hannah Li", "Xander Lee"];
+var TRAVEL_DEFAULTS={
+  'Venus Law':{i:'Thu Oct 22 6:00am',o:'Tue Oct 27 4:30pm'},
+  'Matthew Morawiec':{i:'Thu Oct 22 6:00am',o:'Tue Oct 27 4:30pm'},
+  'Annie Morawiec':{i:'Thu Oct 22 6:20am',o:'Tue Oct 27 1:00am'},
+  'Eva Crouse':{i:'Thu Oct 22 5:30am',o:''},
+  'Shoma Nath':{i:'Thu Oct 22 1:55pm',o:'Tue Oct 27 2:25am'},
+  'Emily Arroyo':{i:'Thu Oct 22 1:55pm',o:'Tue Oct 27 9:30am'},
+  'Willa Smith':{i:'Thu Oct 22 9:55pm',o:''},
+  'Izzy Mollicone':{i:'Thu Oct 22 6:30pm',o:'Mon Oct 26 10:45pm'}
+};
+var travelData={};
+function travelVal(name,field){
+  var r=travelData[name];
+  if(r && typeof r[field]==='string'){ return r[field]; }
+  var d=TRAVEL_DEFAULTS[name];
+  return (d&&d[field])||'';
+}
+function travelLoad(){
+  try{ var raw=window.localStorage.getItem(TRAVEL_KEY); if(raw){ var v=JSON.parse(raw); if(v&&typeof v==='object'){ travelData=v; } } }catch(e){}
+}
+function travelSave(){
+  try{ window.localStorage.setItem(TRAVEL_KEY, JSON.stringify(travelData)); }catch(e){}
+}
+function travelCount(){
+  var n=0;
+  for(var i=0;i<TRAVEL_NAMES.length;i++){ if(travelVal(TRAVEL_NAMES[i],'i').trim()){ n++; } }
+  var el=document.getElementById('travel-count');
+  if(el){ el.innerHTML='<b>'+n+'</b> of '+TRAVEL_NAMES.length+' arrival times in'; }
+}
+function travelGrow(el){ el.style.height='auto'; el.style.height=el.scrollHeight+'px'; }
+function travelGrowAll(){ var t=document.querySelectorAll('#travel-body textarea'); for(var i=0;i<t.length;i++){ travelGrow(t[i]); } }
+window.addEventListener('resize',travelGrowAll);
+function travelInput(name,field){
+  var inp=document.createElement('textarea');
+  inp.rows=1; inp.placeholder='+'; inp.setAttribute('autocomplete','off');
+  inp.addEventListener('keydown',function(e){ if(e.key==='Enter'){ e.preventDefault(); inp.blur(); } });
+  inp.setAttribute('aria-label',name+(field==='i'?' arrival':' departure'));
+  inp.value=travelVal(name,field);
+  inp.addEventListener('input',function(){
+    if(!travelData[name]){ travelData[name]={i:travelVal(name,'i'),o:travelVal(name,'o')}; }
+    travelData[name][field]=inp.value;
+    travelSave(); travelCount(); travelGrow(inp);
+  });
+  return inp;
+}
+(function(){
+  travelLoad();
+  var body=document.getElementById('travel-body');
+  if(!body){ return; }
+  for(var i=0;i<TRAVEL_NAMES.length;i++){
+    var nm=TRAVEL_NAMES[i], tr=document.createElement('tr');
+    var td=document.createElement('td'); td.className='who'; td.textContent=nm; tr.appendChild(td);
+    var t1=document.createElement('td'); t1.appendChild(travelInput(nm,'i')); tr.appendChild(t1);
+    var t2=document.createElement('td'); t2.appendChild(travelInput(nm,'o')); tr.appendChild(t2);
+    body.appendChild(tr);
+  }
+  travelCount();
+  travelGrowAll();
+})();
 </script>
 
 </body>
